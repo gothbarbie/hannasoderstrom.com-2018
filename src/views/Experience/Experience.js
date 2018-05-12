@@ -13,6 +13,11 @@ import imgWebpack from '../../images/webpack.png'
 import imgTaxiSthlm from '../../images/taxisthlm.png'
 import imgMSF from '../../images/msf.png'
 import imgVimla from '../../images/vimla.png'
+import imgHTML5 from '../../images/html5.png'
+import imgCSS3 from '../../images/css3.png'
+import imgPS from '../../images/ps.png'
+import imgPR from '../../images/pr.png'
+import imgPHP from '../../images/php.png'
 
 import Wrapper from '../../components/Layout/Wrapper'
 import Small from '../../components/Small'
@@ -122,12 +127,16 @@ const Experience = () => (
             vanilla JavaScript with few additional tools unless we could build
             them ourselves.
           </Paragraph>
+          <Logos>
+            <Logo alt="JavaScript" maxWidth="60" src={imgJS} />
+            <Logo alt="HTML5" maxWidth="70" src={imgHTML5} />
+            <Logo alt="CSS3" maxWidth="80" src={imgCSS3} />
+            <Logo alt="Photoshop" maxWidth="60" src={imgPS} />
+            <Logo alt="Premiere" maxWidth="60" src={imgPR} />
+            <Logo alt="PHP" maxWidth="150" src={imgPHP} />
+          </Logos>
           <Paragraph>
-            My roles has been primarely focused on front end development so far,
-            using technologies such as:
-          </Paragraph>
-          <Paragraph>
-            We worked with hundrets of famous brands. These are just the ones at
+            We worked with hundreds of famous brands. These are just the ones at
             the top of my head.
           </Paragraph>
         </Main>
