@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Iteam from '../../images/iteam.png'
-import Widespace from '../../images/widespace.png'
+import imgIteam from '../../images/iteam.png'
+import imgWidespace from '../../images/widespace.png'
 
 import imgJS from '../../images/js.png'
 import imgReact from '../../images/react.png'
@@ -17,12 +17,12 @@ import imgVimla from '../../images/vimla.png'
 import Wrapper from '../../components/Layout/Wrapper'
 import Small from '../../components/Small'
 import Paragraph from '../../components/Paragraph'
+import Image from '../../components/Image'
 
 const Column = styled.section`
   display: flex;
   flex-direction: column;
 `
-
 const Article = styled.article`
   width: 100%;
   display: grid;
@@ -33,62 +33,21 @@ const Article = styled.article`
   grid-row-gap: 5%;
   align-items: start;
 `
-
 const Main = styled.main`
   display: block;
   margin-top: 2rem;
 `
-
-const Img = styled.img`
+const Img = Image.extend`
   width: 80%;
-  height: auto;
-  display: block;
 `
-
 const Logos = styled.section`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 `
-
-const Logo = styled.img`
-  width: 100%;
-  height: auto;
+const Logo = Image.extend`
   margin: 1rem;
-`
-
-const LogoJS = Logo.extend`
-  max-width: 60px;
-`
-
-const LogoReact = Logo.extend`
-  max-width: 110px;
-`
-
-const LogoReactNative = Logo.extend`
-  max-width: 180px;
-`
-
-const LogoVue = Logo.extend`
-  max-width: 50px;
-`
-
-const LogoNode = Logo.extend`
-  max-width: 120px;
-`
-
-const LogoWebpack = Logo.extend`
-  max-width: 210px;
-`
-const LogoTaxiSthlm = Logo.extend`
-  max-width: 120px;
-`
-const LogoMSF = Logo.extend`
-  max-width: 200px;
-`
-const LogoVimla = Logo.extend`
-  max-width: 170px;
 `
 
 const Experience = () => (
@@ -96,7 +55,7 @@ const Experience = () => (
     <Column>
       <Article>
         <header>
-          <Img alt="Iteam" src={Iteam} />
+          <Img alt="Iteam" src={imgIteam} />
           <Small>Aug 2016 - Current</Small>
         </header>
         <Main>
@@ -115,12 +74,12 @@ const Experience = () => (
             using technologies such as:
           </Paragraph>
           <Logos>
-            <LogoJS src={imgJS} />
-            <LogoReact src={imgReact} />
-            <LogoReactNative src={imgReactNative} />
-            <LogoVue src={imgVue} />
-            <LogoNode src={imgNode} />
-            <LogoWebpack src={imgWebpack} />
+            <Logo alt="JavaScript" maxWidth="60" src={imgJS} />
+            <Logo alt="React" maxWidth="110" src={imgReact} />
+            <Logo alt="React Native" maxWidth="180" src={imgReactNative} />
+            <Logo alt="Vue" maxWidth="50" src={imgVue} />
+            <Logo alt="NodeJS" maxWidth="120" src={imgNode} />
+            <Logo alt="Webpack" maxWidth="210" src={imgWebpack} />
           </Logos>
           <Paragraph>
             I have grown in skill a great deal during the last year through my
@@ -129,15 +88,15 @@ const Experience = () => (
             development.
           </Paragraph>
           <Logos>
-            <LogoTaxiSthlm src={imgTaxiSthlm} />
-            <LogoMSF src={imgMSF} />
-            <LogoVimla src={imgVimla} />
+            <Logo alt="Taxi Stockholm" maxWidth="120" src={imgTaxiSthlm} />
+            <Logo alt="Doctors Without Borders" maxWidth="200" src={imgMSF} />
+            <Logo alt="Vimla" maxWidth="170" src={imgVimla} />
           </Logos>
         </Main>
       </Article>
       <Article>
         <header>
-          <Img alt="Widespace" src={Widespace} />
+          <Img alt="Widespace" src={imgWidespace} />
           <Small>Feb 2015 - Aug 2016</Small>
         </header>
         <Main>
