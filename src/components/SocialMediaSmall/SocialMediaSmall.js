@@ -31,17 +31,17 @@ const SocialMediaSmall = () => (
   <Section>
     <ul>
       <li>
-        <a href="#">
+        <a href="https://github.com/gothbarbie/hannasoderstrom.com-2018">
           <Icon className="fab fa-github" />
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/hannasoderstromwebdev/">
           <Icon className="fab fa-linkedin" />
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="https://medium.com/@gothbarbie84">
           <Icon className="fab fa-medium" />
         </a>
       </li>
