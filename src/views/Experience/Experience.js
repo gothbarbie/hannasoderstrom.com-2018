@@ -4,7 +4,15 @@ import styled from 'styled-components'
 import Iteam from '../../images/iteam.png'
 import Widespace from '../../images/widespace.png'
 
-import JS from '../../images/js.png'
+import imgJS from '../../images/js.png'
+import imgReact from '../../images/react.png'
+import imgReactNative from '../../images/reactnative.png'
+import imgVue from '../../images/vue.png'
+import imgNode from '../../images/node.png'
+import imgWebpack from '../../images/webpack.png'
+import imgTaxiSthlm from '../../images/taxisthlm.png'
+import imgMSF from '../../images/msf.png'
+import imgVimla from '../../images/vimla.png'
 
 import Wrapper from '../../components/Layout/Wrapper'
 import Small from '../../components/Small'
@@ -37,6 +45,52 @@ const Img = styled.img`
   display: block;
 `
 
+const Logos = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+`
+
+const Logo = styled.img`
+  width: 100%;
+  height: auto;
+  margin: 1rem;
+`
+
+const LogoJS = Logo.extend`
+  max-width: 60px;
+`
+
+const LogoReact = Logo.extend`
+  max-width: 110px;
+`
+
+const LogoReactNative = Logo.extend`
+  max-width: 180px;
+`
+
+const LogoVue = Logo.extend`
+  max-width: 50px;
+`
+
+const LogoNode = Logo.extend`
+  max-width: 120px;
+`
+
+const LogoWebpack = Logo.extend`
+  max-width: 210px;
+`
+const LogoTaxiSthlm = Logo.extend`
+  max-width: 120px;
+`
+const LogoMSF = Logo.extend`
+  max-width: 200px;
+`
+const LogoVimla = Logo.extend`
+  max-width: 170px;
+`
+
 const Experience = () => (
   <Wrapper>
     <Column>
@@ -57,10 +111,28 @@ const Experience = () => (
             we produce really great results for a wide range of businesses.
           </Paragraph>
           <Paragraph>
-            My roles has been primarly focused on front end development so far,
+            My roles has been primarily focused on front end development so far,
             using technologies such as:
           </Paragraph>
-          <Img src={JS} />
+          <Logos>
+            <LogoJS src={imgJS} />
+            <LogoReact src={imgReact} />
+            <LogoReactNative src={imgReactNative} />
+            <LogoVue src={imgVue} />
+            <LogoNode src={imgNode} />
+            <LogoWebpack src={imgWebpack} />
+          </Logos>
+          <Paragraph>
+            I have grown in skill a great deal during the last year through my
+            daily and continuous work with cutting edge technologies, working
+            with really experienced and talented people in all areas of web
+            development.
+          </Paragraph>
+          <Logos>
+            <LogoTaxiSthlm src={imgTaxiSthlm} />
+            <LogoMSF src={imgMSF} />
+            <LogoVimla src={imgVimla} />
+          </Logos>
         </Main>
       </Article>
       <Article>
