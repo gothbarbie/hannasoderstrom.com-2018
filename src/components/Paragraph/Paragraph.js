@@ -5,7 +5,7 @@ const Paragraph = styled.p`
   line-height: 1.5;
   margin: 1.1rem 0;
   font-weight: 300;
-  color: #333333;
+  color: #828282;
 `
 
 export default Paragraph
