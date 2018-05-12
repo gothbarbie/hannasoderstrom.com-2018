@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Wrapper from '../../components/Layout/Wrapper'
@@ -32,6 +33,11 @@ const Article = styled.article`
   margin: 1rem 0;
 `
 
+const Linked = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`
+
 const H2 = styled.h2`
   font-size: 1.5rem;
   font-weight: 500;
@@ -48,14 +54,16 @@ const Recently = () => (
   <Wrapper>
     <Grid>
       <Article className="first">
-        <Img />
-        <H2>New portfolio design</H2>
-        <Paragraph>
-          I try to re-do my portfolio from time to time. It’s a good project for
-          trying out new technologies, if nothing else. It also means that I get
-          to improve my design skills, since I don’t do much designing now a
-          days (focusing mostly on...
-        </Paragraph>
+        <Linked to={`recently/the-title`}>
+          <Img />
+          <H2>New portfolio design</H2>
+          <Paragraph>
+            I try to re-do my portfolio from time to time. It’s a good project
+            for trying out new technologies, if nothing else. It also means that
+            I get to improve my design skills, since I don’t do much designing
+            now a days (focusing mostly on...
+          </Paragraph>
+        </Linked>
       </Article>
       <Article>
         <Img />

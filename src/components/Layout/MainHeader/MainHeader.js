@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Wrapper from '../Wrapper'
@@ -14,7 +15,9 @@ const MainHeader = () => {
   return (
     <Header>
       <Wrapper>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <MainNavigation />
       </Wrapper>
     </Header>
