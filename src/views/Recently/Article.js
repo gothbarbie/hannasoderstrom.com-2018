@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Small from '../../components/Small'
 import Paragraph from '../../components/Paragraph'
 
 const WrapperSmall = styled.section`
@@ -20,13 +21,6 @@ const Img = styled.img`
 const H1 = styled.h1`
   font-size: 2rem;
   font-weight: bold;
-`
-
-const Small = styled.small`
-  color: #bdbdbd;
-  font-weight: bold;
-  font-size: 0.8rem;
-  line-height: 2rem;
 `
 
 const Article = () => (

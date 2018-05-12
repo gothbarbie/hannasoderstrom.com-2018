@@ -12,12 +12,16 @@ const Footer = styled.footer`
   background: #d76d77;
 `
 
+const Linked = styled(Link)`
+  text-decoration: none;
+`
+
 const MainFooter = () => (
   <Footer>
     <Wrapper>
-      <Link to="/">
+      <Linked to="/">
         <Logo />
-      </Link>
+      </Linked>
       <SocialMediaSmall />
       <MainNavigation />
     </Wrapper>
