@@ -7,10 +7,13 @@ const Section = styled.section`
   align-items: center;
 
   & ul {
-    width: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+
+  & li {
+    margin: 0 25%;
   }
 
   & a {
@@ -24,7 +27,6 @@ const Section = styled.section`
 const Icon = styled.i`
   font-size: 2rem;
   color: #fff;
-  margin-right: 1rem;
 `
 
 const SocialMediaSmall = () => (

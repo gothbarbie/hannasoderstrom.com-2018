@@ -1,15 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import imgMoreAboutMe from '../../images/more-about-me.svg'
+
 const Section = styled.section`
   background: #3a1c71;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 3%;
+  position: relative;
 
   & ul {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,6 +30,22 @@ const Icon = styled.i`
   font-size: 3rem;
   color: #fff;
   margin-right: 1rem;
+`
+
+const Circle = styled.div`
+  position: absolute;
+  left: calc(50% - 25px);
+  bottom: -15px;
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  background: #3a1c71;
+`
+
+const Img = styled.img`
+  position: absolute;
+  right: 2%;
+  bottom: 10%;
 `
 
 const SocialMedia = () => (
@@ -48,6 +67,8 @@ const SocialMedia = () => (
         </a>
       </li>
     </ul>
+    <Circle />
+    <Img src={imgMoreAboutMe} />
   </Section>
 )
 

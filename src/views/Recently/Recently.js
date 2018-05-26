@@ -8,7 +8,7 @@ import Paragraph from '../../components/Paragraph'
 const Grid = styled.section`
   width: 100%;
   display: grid;
-  padding: 2rem 0;
+  padding: 2rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 2fr;
   grid-column-gap: 5%;

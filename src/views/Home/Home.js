@@ -8,7 +8,7 @@ import SocialMedia from '../../components/SocialMedia'
 import H2 from '../../components/H2'
 import Paragraph from '../../components/Paragraph'
 
-const HomeWrapper = styled.section``
+import imgHeroComments from '../../images/menu-comments.svg'
 
 const Hero = styled.section`
   background: url(${imgComputer});
@@ -21,22 +21,31 @@ const Hero = styled.section`
   position: relative;
 `
 
+const HeroComments = styled.img`
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  width: 350px;
+`
+
 const H1 = styled.h1`
+  font-family: 'Gamja Flower', sans-serif;
   font-size: 3rem;
   line-height: 4rem;
   text-align: center;
   margin: 20% auto;
   color: #fff;
-  font-weight: 800;
+  font-weight: 500;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 `
 
 const AboutMe = styled.section`
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-column-gap: 6%;
+  grid-column-gap: 10%;
+  align-items: center;
   margin: 10% auto;
-  width: 60%;
+  width: 70%;
 `
 
 const Avatar = styled.img`
@@ -52,7 +61,7 @@ const SmallAvatar = styled.img`
 `
 
 const Quotes = styled.section`
-  background: rgba(215, 109, 119, 0.06);
+  background: rgba(58, 28, 113, 0.06);
   display: grid;
   justify-content: center;
   padding: 5%;
@@ -77,12 +86,13 @@ const Name = styled.p`
 `
 
 const Home = () => (
-  <HomeWrapper>
+  <section>
     <Hero>
+      <HeroComments src={imgHeroComments} />
       <H1>
-        Hi there. I'm Hanna.<br />
+        Hi there, I'm Hanna.<br />
         I build web applications.<br />
-        :)
+        :-)
       </H1>
     </Hero>
     <SocialMedia />
@@ -135,7 +145,7 @@ const Home = () => (
         <Name>- Someone</Name>
       </Quoter>
     </Quotes>
-  </HomeWrapper>
+  </section>
 )
 
 export default Home
