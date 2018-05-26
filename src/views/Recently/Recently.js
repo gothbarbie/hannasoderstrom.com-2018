@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 import styled from 'styled-components'
+
+import { fetchRecentlies } from '../../actions'
 
 import Wrapper from '../../components/Layout/Wrapper'
 import Paragraph from '../../components/Paragraph'
@@ -44,59 +47,48 @@ const H2 = styled.h2`
   margin: 1rem 0;
 `
 
-const Img = styled.img`
-  width: 100%;
-  height: auto;
-  background: #efefef;
-`
+type Props = {
+  fetchRecentlies: Function,
+  recentlies: Array<{}>,
+}
 
-const Recently = () => (
-  <Wrapper>
-    <Grid>
-      <Article className="first">
-        <Linked to={`recently/the-title`}>
-          <Img />
-          <H2>New portfolio design</H2>
-          <Paragraph>
-            I try to re-do my portfolio from time to time. It’s a good project
-            for trying out new technologies, if nothing else. It also means that
-            I get to improve my design skills, since I don’t do much designing
-            now a days (focusing mostly on...
-          </Paragraph>
-        </Linked>
-      </Article>
-      <Article>
-        <Img />
-        <H2>New portfolio design</H2>
-        <p>Introduction text...</p>
-      </Article>
-      <Article>
-        <Img />
-        <H2>New portfolio design</H2>
-        <p>Introduction text...</p>
-      </Article>
-      <Article>
-        <Img />
-        <H2>New portfolio design</H2>
-        <p>Introduction text...</p>
-      </Article>
-      <Article>
-        <Img />
-        <H2>New portfolio design</H2>
-        <p>Introduction text...</p>
-      </Article>
-      <Article>
-        <Img />
-        <H2>New portfolio design</H2>
-        <p>Introduction text...</p>
-      </Article>
-      <Article>
-        <Img />
-        <H2>New portfolio design</H2>
-        <p>Introduction text...</p>
-      </Article>
-    </Grid>
-  </Wrapper>
-)
+class Recently extends Component<Props> {
+  componentDidMount () {
+    this.props.fetchRecentlies()
+  }
 
-export default Recently
+  renderArticles () {
+    if (!this.props.recentlies.length) return null
+
+    return this.props.recentlies.map(item => {
+      return (
+        <Article className={item.id === '1' && 'first'} key={item.id}>
+          <Linked to={`recently/${item.slug}`}>
+            <H2 dangerouslySetInnerHTML={{ __html: item.title.excerpt }} />
+              <div dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
+          </Linked>
+        </Article>
+      )
+    })
+  }
+
+  render () {
+    return (
+      <Wrapper>
+        <Grid>{this.renderArticles()}</Grid>
+      </Wrapper>
+    )
+  }
+}
+
+const mapStateToProps = ({ recentlies }) => {
+  return {
+    recentlies,
+  }
+}
+
+const mapDispatchToProps = {
+  fetchRecentlies,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Recently)
