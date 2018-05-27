@@ -10,6 +10,7 @@ import Recently from './views/Recently'
 import RecentlyArticle from './views/Recently/Article'
 import Experience from './views/Experience'
 import Contact from './views/Contact'
+import NotFound404 from './views/NotFound404/NotFound404'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -32,6 +33,7 @@ const App = () => (
         <Route component={RecentlyArticle} path="/recently/:title" />
         <Route component={Experience} exact path="/experience" />
         <Route component={Contact} exact path="/contact" />
+        <Route component={NotFound404} path="/not-found" />
       </Main>
       <MainFooter />
     </AppWrapper>

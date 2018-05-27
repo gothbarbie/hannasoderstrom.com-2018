@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import styled from 'styled-components'
@@ -8,18 +8,13 @@ import styled from 'styled-components'
 import { fetchRecently } from '../../actions'
 
 import Wrapper from '../../components/Layout/Wrapper'
-import Small from '../../components/Small'
 import LoadingSpinner from '../../components/LoadingSpinner'
+import H1 from '../../components/H1'
 
 const WrapperSmall = styled.section`
   max-width: 600px;
   margin: 5% auto;
   padding: 0 2rem;
-`
-
-const H1 = styled.h1`
-  font-size: 2rem;
-  font-weight: bold;
 `
 
 type Props = {
@@ -42,7 +37,8 @@ class Article extends Component<Props> {
   render () {
     if (this.props.loading) return <LoadingSpinner />
 
-    if (!this.props.recentlies.length) return <p>Not found.</p>
+    if (!this.props.recentlies.length)
+      return this.props.history.push('/not-found')
 
     const { content, title } = this.props.recentlies[0]
 
@@ -69,4 +65,4 @@ const mapDispatchToProps = {
   fetchRecently,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Article)
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Article))
