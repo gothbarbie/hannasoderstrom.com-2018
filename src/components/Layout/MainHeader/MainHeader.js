@@ -8,7 +8,6 @@ import Logo from '../../Logo'
 import MainNavigation from '../MainNavigation'
 
 const Header = styled.header`
-  padding: 1rem 2rem;
   background: #3a1c71;
 `
 

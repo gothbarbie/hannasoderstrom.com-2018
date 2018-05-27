@@ -1,8 +1,15 @@
-import React from 'react'
+// @flow
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+
 import styled from 'styled-components'
 
+import { fetchRecently } from '../../actions'
+
+import Wrapper from '../../components/Layout/Wrapper'
 import Small from '../../components/Small'
-import Paragraph from '../../components/Paragraph'
+import LoadingSpinner from '../../components/LoadingSpinner'
 
 const WrapperSmall = styled.section`
   max-width: 600px;
@@ -10,40 +17,56 @@ const WrapperSmall = styled.section`
   padding: 0 2rem;
 `
 
-const Img = styled.img`
-  width: 100%;
-  height: auto;
-  background: #efefef;
-  min-height: 300px;
-  margin-bottom: 2rem;
-`
-
 const H1 = styled.h1`
   font-size: 2rem;
   font-weight: bold;
 `
 
-const Article = () => (
-  <WrapperSmall>
-    <div>
-      <Img />
-      <H1>The title</H1>
-      <Small>April 21, 2018</Small>
-      <Paragraph>
-        I try to re-do my portfolio from time to time. It’s a good project for
-        trying out new technologies, if nothing else. It also means that I get
-        to improve my design skills, since I don’t do much designing now a days
-        (focusing mostly on development).
-      </Paragraph>
-      <Paragraph>
-        This time I’m using the static website generator GatsbyJS and the
-        content is rendered with React, while the data is fetched from
-        Markdown-files. That means that to generate new content, I simply have
-        to add a new markdown-file, write some content and then push the
-        updates.
-      </Paragraph>
-    </div>
-  </WrapperSmall>
-)
+type Props = {
+  loading: boolean,
+  fetchRecently: Function,
+  recentlies: Array<{}>,
+}
 
-export default Article
+class Article extends Component<Props> {
+  componentDidMount () {
+    const url = decodeURI(window.location.pathname).split('/')
+    const slug = url[2]
+    const regex = new RegExp(/([A-Za-z0-9\-])+/g)
+
+    if (regex.test(decodeURI(slug))) {
+      this.props.fetchRecently(slug)
+    }
+  }
+
+  render () {
+    if (this.props.loading) return <LoadingSpinner />
+
+    if (!this.props.recentlies.length) return <p>Not found.</p>
+
+    const { content, title } = this.props.recentlies[0]
+
+    return (
+      <Wrapper>
+        <Link to="/recently">← Back</Link>
+          <WrapperSmall>
+            <H1 dangerouslySetInnerHTML={{ __html: title.rendered }} />
+              <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
+          </WrapperSmall>
+      </Wrapper>
+    )
+  }
+}
+
+const mapStateToProps = ({ recentlies, loading }) => {
+  return {
+    recentlies,
+    loading,
+  }
+}
+
+const mapDispatchToProps = {
+  fetchRecently,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Article)

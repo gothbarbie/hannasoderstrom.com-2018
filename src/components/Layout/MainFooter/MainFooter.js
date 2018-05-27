@@ -17,16 +17,6 @@ const Linked = styled(Link)`
   text-decoration: none;
 `
 
-const Circle = styled.div`
-  position: absolute;
-  left: calc(50% - 50px);
-  top: -35px;
-  width: 100px;
-  height: 50px;
-  border-radius: 50%;
-  background: #f3f2f6;
-`
-
 const MainFooter = () => (
   <Footer>
     <Wrapper>
@@ -36,7 +26,6 @@ const MainFooter = () => (
       <SocialMediaSmall />
       <MainNavigation />
     </Wrapper>
-    <Circle />
   </Footer>
 )
 

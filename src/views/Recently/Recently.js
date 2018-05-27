@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -6,7 +7,7 @@ import styled from 'styled-components'
 import { fetchRecentlies } from '../../actions'
 
 import Wrapper from '../../components/Layout/Wrapper'
-import Paragraph from '../../components/Paragraph'
+import LoadingSpinner from '../../components/LoadingSpinner'
 
 const Grid = styled.section`
   width: 100%;
@@ -48,6 +49,7 @@ const H2 = styled.h2`
 `
 
 type Props = {
+  loading: boolean,
   fetchRecentlies: Function,
   recentlies: Array<{}>,
 }
@@ -58,13 +60,15 @@ class Recently extends Component<Props> {
   }
 
   renderArticles () {
-    if (!this.props.recentlies.length) return null
+    const { recentlies } = this.props
 
-    return this.props.recentlies.map(item => {
+    if (!recentlies.length) return null
+
+    return recentlies.map(item => {
       return (
         <Article className={item.id === '1' && 'first'} key={item.id}>
           <Linked to={`recently/${item.slug}`}>
-            <H2 dangerouslySetInnerHTML={{ __html: item.title.excerpt }} />
+            <H2 dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
               <div dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
           </Linked>
         </Article>
@@ -73,6 +77,8 @@ class Recently extends Component<Props> {
   }
 
   render () {
+    if (this.props.loading) return <LoadingSpinner />
+
     return (
       <Wrapper>
         <Grid>{this.renderArticles()}</Grid>
@@ -81,9 +87,10 @@ class Recently extends Component<Props> {
   }
 }
 
-const mapStateToProps = ({ recentlies }) => {
+const mapStateToProps = ({ recentlies, loading }) => {
   return {
     recentlies,
+    loading,
   }
 }
 

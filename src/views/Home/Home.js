@@ -29,13 +29,13 @@ const HeroComments = styled.img`
 `
 
 const H1 = styled.h1`
-  font-family: 'Gamja Flower', sans-serif;
+  font-family: 'Shadows Into Light', sans-serif;
   font-size: 3rem;
   line-height: 4rem;
   text-align: center;
   margin: 20% auto;
   color: #fff;
-  font-weight: 500;
+  font-weight: 300;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 `
 
@@ -91,8 +91,7 @@ const Home = () => (
       <HeroComments src={imgHeroComments} />
       <H1>
         Hi there, I'm Hanna.<br />
-        I build web applications.<br />
-        :-)
+        I build web applications. :-)
       </H1>
     </Hero>
     <SocialMedia />
