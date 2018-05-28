@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`views/NotFound404 renders 1`] = `
+<styled.div
+  column={true}
+>
+  <styled.h1>
+    Not Found
+  </styled.h1>
+  <styled.p>
+    We could not find what you were looking for.
+  </styled.p>
+  <styled.p>
+    <Link
+      replace={false}
+      to="/"
+    >
+      ← Back to Home Page
+    </Link>
+  </styled.p>
+</styled.div>
+`;

@@ -29,7 +29,7 @@ type Props = {
   recentlies: Array<{}>,
 }
 
-class Article extends Component<Props> {
+export class Article extends Component<Props> {
   componentDidMount () {
     const url = decodeURI(window.location.pathname).split('/')
     const slug = url[2]

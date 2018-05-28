@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`views/Article renders when no content 1`] = `""`;
+
+exports[`views/Article renders with content 1`] = `
+<styled.div>
+  <Link
+    replace={false}
+    to="/recently"
+  >
+    ← Back
+  </Link>
+  <styled.section>
+    <header>
+      <styled.h1
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Hello",
+          }
+        }
+      />
+      <styled.small
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "April 13, 2016",
+          }
+        }
+      />
+    </header>
+    <main
+      className="main"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>Hello world</p>",
+        }
+      }
+    />
+  </styled.section>
+</styled.div>
+`;

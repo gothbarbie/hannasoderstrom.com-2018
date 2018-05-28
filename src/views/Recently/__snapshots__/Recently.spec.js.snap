@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`views/Recently renders when no content 1`] = `
+<styled.div>
+  <styled.section />
+</styled.div>
+`;
+
+exports[`views/Recently renders with content 1`] = `
+<styled.div>
+  <styled.section>
+    <styled.article
+      className={false}
+      key="1"
+    >
+      <Styled(Link)
+        to="recently/undefined"
+      >
+        <styled.h2
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Hello",
+            }
+          }
+        />
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>Hello world</p>",
+            }
+          }
+        />
+      </Styled(Link)>
+    </styled.article>
+  </styled.section>
+</styled.div>
+`;

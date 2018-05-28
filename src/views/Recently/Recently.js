@@ -54,7 +54,7 @@ type Props = {
   recentlies: Array<{}>,
 }
 
-class Recently extends Component<Props> {
+export class Recently extends Component<Props> {
   componentDidMount () {
     this.props.fetchRecentlies()
   }
