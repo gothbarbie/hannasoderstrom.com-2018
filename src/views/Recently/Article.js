@@ -20,6 +20,9 @@ const WrapperSmall = styled.section`
 type Props = {
   loading: boolean,
   fetchRecently: Function,
+  history: {
+    push: Function,
+  },
   recentlies: Array<{}>,
 }
 
@@ -27,7 +30,7 @@ class Article extends Component<Props> {
   componentDidMount () {
     const url = decodeURI(window.location.pathname).split('/')
     const slug = url[2]
-    const regex = new RegExp(/([A-Za-z0-9\-])+/g)
+    const regex = new RegExp(/([A-Za-z0-9-])+/g)
 
     if (regex.test(decodeURI(slug))) {
       this.props.fetchRecently(slug)

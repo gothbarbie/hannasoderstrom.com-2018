@@ -90,7 +90,7 @@ const Home = () => (
     <Hero>
       <HeroComments src={imgHeroComments} />
       <H1>
-        Hi there, I'm Hanna.<br />
+        Hi there, I'm Hanna!<br />
         I build web applications. :-)
       </H1>
     </Hero>
