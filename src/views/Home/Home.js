@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import imgComputer from '../../images/computer.jpg'
@@ -104,11 +105,16 @@ const Home = () => (
           and find solutions to problems people couldn’t imagine.
         </Paragraph>
         <Paragraph>
-          As I grew up, someone made the Internet and I became a web developer.
+          I grew up, someone made the Internet and I eventually became a web
+          developer.
         </Paragraph>
         <Paragraph>
           Now I build awesome web applications and find really cool solutions to
           problems most people can’t imagine! ;)
+        </Paragraph>
+        <Paragraph>
+          Want more specific examples and details?{' '}
+          <Link to="/experience">Check out my experience</Link>.
         </Paragraph>
       </div>
     </AboutMe>

@@ -14,7 +14,7 @@ const rotating = keyframes`
 `
 
 const Spinner = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -22,7 +22,7 @@ const Spinner = styled.div`
   background: rgba(0, 0, 0, 0.15);
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   align-items: center;
   justify-content: center;
 

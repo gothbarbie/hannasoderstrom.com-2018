@@ -7,6 +7,8 @@ import Logo from '../../Logo'
 import SocialMediaSmall from '../../SocialMediaSmall'
 import MainNavigation from '../MainNavigation'
 
+import imgTheresMore from '../../../images/theres-more.svg'
+
 const Footer = styled.footer`
   padding: 5rem 2rem;
   background: #313131;
@@ -15,6 +17,12 @@ const Footer = styled.footer`
 
 const Linked = styled(Link)`
   text-decoration: none;
+`
+
+const Img = styled.img`
+  position: absolute;
+  right: 15%;
+  top: 20%;
 `
 
 const MainFooter = () => (
@@ -26,6 +34,7 @@ const MainFooter = () => (
       <SocialMediaSmall />
       <MainNavigation />
     </Wrapper>
+    <Img src={imgTheresMore} />
   </Footer>
 )
 

@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`views/Experience renders 1`] = `
+<styled.div>
+  <styled.section>
+    <styled.article>
+      <header>
+        <styled.img
+          alt="Iteam"
+          src="iteam.png"
+        />
+        <styled.small>
+          Aug 2016 - Current
+        </styled.small>
+      </header>
+      <styled.main>
+        <styled.p>
+          Culture, value and fun is the keywords for Iteam, where I work as a Web Developer. We work in an agile manner, in self-organising teams and in close relationship with our clients, to bring them value. Not only with technology, but with culture as well. Our core values - to produce value, to have fun and to do good - influence not only our daily work, but the clients we take on, the projects we choose to be a part of and therefore also the dedication and eagerness with which we produce really great results for a wide range of businesses.
+        </styled.p>
+        <styled.p>
+          My roles has been primarily focused on front end development so far, using technologies such as:
+        </styled.p>
+        <styled.section>
+          <styled.img
+            alt="JavaScript"
+            maxWidth="60"
+            src="js.png"
+          />
+          <styled.img
+            alt="React"
+            maxWidth="110"
+            src="react.png"
+          />
+          <styled.img
+            alt="React Native"
+            maxWidth="180"
+            src="reactnative.png"
+          />
+          <styled.img
+            alt="Vue"
+            maxWidth="50"
+            src="vue.png"
+          />
+          <styled.img
+            alt="NodeJS"
+            maxWidth="120"
+            src="node.png"
+          />
+          <styled.img
+            alt="Webpack"
+            maxWidth="210"
+            src="webpack.png"
+          />
+        </styled.section>
+        <styled.p>
+          I have grown in skill a great deal during the last year through my daily and continuous work with cutting edge technologies, working with really experienced and talented people in all areas of web development.
+        </styled.p>
+        <styled.section>
+          <styled.img
+            alt="Taxi Stockholm"
+            maxWidth="120"
+            src="taxisthlm.png"
+          />
+          <styled.img
+            alt="Doctors Without Borders"
+            maxWidth="200"
+            src="msf.png"
+          />
+          <styled.img
+            alt="Vimla"
+            maxWidth="170"
+            src="vimla.png"
+          />
+        </styled.section>
+      </styled.main>
+    </styled.article>
+    <styled.article>
+      <header>
+        <styled.img
+          alt="Widespace"
+          src="widespace.png"
+        />
+        <styled.small>
+          Feb 2015 - Aug 2016
+        </styled.small>
+      </header>
+      <styled.main>
+        <styled.p>
+          Widespace provides a platform for mobile advertising all over Europe, connecting publishers with advertisers.
+        </styled.p>
+        <styled.p>
+          I worked in the Studio team, a group with a wide range of skills doing everything from producing ads and new creative mobile ad formats to optimising ads from other medias for the mobile platform.
+        </styled.p>
+        <styled.p>
+          We worked daily with very short deadlines, 100% performance accountability and served the greatest brands there is, our ads shown to millions of people daily and on the most saught after ad-spots. We focused not only on making ads seen but also to be engaging and fun with all the tools and sensors of modern mobile phones at our disposal.
+        </styled.p>
+        <styled.p>
+          Since the mobile web depends on small sized content, we used mainly vanilla JavaScript with few additional tools unless we could build them ourselves.
+        </styled.p>
+        <styled.section>
+          <styled.img
+            alt="JavaScript"
+            maxWidth="60"
+            src="js.png"
+          />
+          <styled.img
+            alt="HTML5"
+            maxWidth="70"
+            src="html5.png"
+          />
+          <styled.img
+            alt="CSS3"
+            maxWidth="80"
+            src="css3.png"
+          />
+          <styled.img
+            alt="Photoshop"
+            maxWidth="60"
+            src="ps.png"
+          />
+          <styled.img
+            alt="Premiere"
+            maxWidth="60"
+            src="pr.png"
+          />
+          <styled.img
+            alt="PHP"
+            maxWidth="150"
+            src="php.png"
+          />
+        </styled.section>
+        <styled.p>
+          We worked with hundreds of famous brands. These are just the ones at the top of my head.
+        </styled.p>
+      </styled.main>
+    </styled.article>
+  </styled.section>
+</styled.div>
+`;

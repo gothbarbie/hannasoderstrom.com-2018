@@ -10,6 +10,9 @@ import { fetchRecently } from '../../actions'
 import Wrapper from '../../components/Layout/Wrapper'
 import LoadingSpinner from '../../components/LoadingSpinner'
 import H1 from '../../components/H1'
+import Small from '../../components/Small'
+
+import './Article.css'
 
 const WrapperSmall = styled.section`
   max-width: 600px;
@@ -40,17 +43,33 @@ class Article extends Component<Props> {
   render () {
     if (this.props.loading) return <LoadingSpinner />
 
-    if (!this.props.recentlies.length)
-      return this.props.history.push('/not-found')
+    if (!this.props.recentlies.length) return null
 
-    const { content, title } = this.props.recentlies[0]
+    const { content, date, title } = this.props.recentlies[0]
+
+    const dateFormatted = new Date(date)
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }
 
     return (
       <Wrapper>
         <Link to="/recently">← Back</Link>
           <WrapperSmall>
-            <H1 dangerouslySetInnerHTML={{ __html: title.rendered }} />
-              <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
+            <header>
+              <H1 dangerouslySetInnerHTML={{ __html: title.rendered }} />
+                <Small
+                  dangerouslySetInnerHTML={{
+                __html: dateFormatted.toLocaleDateString('en-EN', options),
+              }}
+            />
+            </header>
+              <main
+                className="main"
+                dangerouslySetInnerHTML={{ __html: content.rendered }}
+          />
           </WrapperSmall>
       </Wrapper>
     )

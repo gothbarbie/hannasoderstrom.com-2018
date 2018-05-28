@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`views/Home renders 1`] = `
+<section>
+  <styled.section>
+    <styled.img
+      src="menu-comments.svg"
+    />
+    <styled.h1>
+      Hi there, I'm Hanna!
+      <br />
+      I build web applications. :-)
+    </styled.h1>
+  </styled.section>
+  <SocialMedia />
+  <styled.section>
+    <styled.img
+      alt="Hanna Söderström"
+      src="hanna2018.jpg"
+    />
+    <div>
+      <styled.h2>
+        About me
+      </styled.h2>
+      <styled.p>
+        As a kid I dreamed of being an inventor, creating really cool machines and find solutions to problems people couldn’t imagine.
+      </styled.p>
+      <styled.p>
+        I grew up, someone made the Internet and I eventually became a web developer.
+      </styled.p>
+      <styled.p>
+        Now I build awesome web applications and find really cool solutions to problems most people can’t imagine! ;)
+      </styled.p>
+      <styled.p>
+        Want more specific examples and details?
+         
+        <Link
+          replace={false}
+          to="/experience"
+        >
+          Check out my experience
+        </Link>
+        .
+      </styled.p>
+    </div>
+  </styled.section>
+  <styled.section>
+    <styled.article>
+      <styled.img
+        alt="Hanna Söderström"
+        src="hanna2018.jpg"
+      />
+      <styled.p>
+        <em>
+          "Hanna is a great innovator and a fun person to work with!"
+        </em>
+      </styled.p>
+      <styled.p>
+        - Someone
+      </styled.p>
+    </styled.article>
+    <styled.article>
+      <styled.img
+        alt="Hanna Söderström"
+        src="hanna2018.jpg"
+      />
+      <styled.p>
+        <em>
+          "Hanna is a great innovator and a fun person to work with!"
+        </em>
+      </styled.p>
+      <styled.p>
+        - Someone
+      </styled.p>
+    </styled.article>
+    <styled.article>
+      <styled.img
+        alt="Hanna Söderström"
+        src="hanna2018.jpg"
+      />
+      <styled.p>
+        <em>
+          "Hanna is a great innovator and a fun person to work with!"
+        </em>
+      </styled.p>
+      <styled.p>
+        - Someone
+      </styled.p>
+    </styled.article>
+  </styled.section>
+</section>
+`;
