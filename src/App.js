@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import styled from 'styled-components'
 
+import ScrollToTop from './components/ScrollToTop'
 import MainHeader from './components/Layout/MainHeader'
 import MainFooter from './components/Layout/MainFooter'
 
@@ -26,16 +27,18 @@ const Main = styled.main`
 const App = () => (
   <Router>
     <AppWrapper>
-      <MainHeader />
-      <Main>
-        <Route component={Home} exact path="/" />
-        <Route component={Recently} exact path="/recently" />
-        <Route component={RecentlyArticle} path="/recently/:title" />
-        <Route component={Experience} exact path="/experience" />
-        <Route component={Contact} exact path="/contact" />
-        <Route component={NotFound404} path="/not-found" />
-      </Main>
-      <MainFooter />
+      <ScrollToTop>
+        <MainHeader />
+        <Main>
+          <Route component={Home} exact path="/" />
+          <Route component={Recently} exact path="/recently" />
+          <Route component={RecentlyArticle} path="/recently/:title" />
+          <Route component={Experience} exact path="/experience" />
+          <Route component={Contact} exact path="/contact" />
+          <Route component={NotFound404} path="/not-found" />
+        </Main>
+        <MainFooter />
+      </ScrollToTop>
     </AppWrapper>
   </Router>
 )
