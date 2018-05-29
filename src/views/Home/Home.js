@@ -90,7 +90,7 @@ const Home = () => (
   <section>
     <Hero>
       <HeroComments src={imgHeroComments} />
-      <H1>
+      <H1 data-test="title">
         Hi there, I'm Hanna!<br />
         I build web applications. :-)
       </H1>

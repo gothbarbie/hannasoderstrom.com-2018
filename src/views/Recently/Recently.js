@@ -66,7 +66,11 @@ export class Recently extends Component<Props> {
 
     return recentlies.map(item => {
       return (
-        <Article className={item.id === '1' && 'first'} key={item.id}>
+        <Article
+          className={item.id === '1' && 'first'}
+          data-test="article"
+          key={item.id}
+        >
           <Linked to={`recently/${item.slug}`}>
             <H2 dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
               <div dangerouslySetInnerHTML={{ __html: item.content.rendered }} />

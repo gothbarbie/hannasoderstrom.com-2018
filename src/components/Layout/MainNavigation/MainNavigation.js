@@ -43,6 +43,7 @@ const MainNavigation = () => (
       <li>
         <HomeLinkWithActive
           active={window.location.pathname === '/' ? 'active' : ''}
+          data-test="home-link"
           to="/"
         >
           <Icon name="home" />
@@ -51,6 +52,7 @@ const MainNavigation = () => (
       <li>
         <LinkWithActive
           active={window.location.pathname === '/recently' ? 'active' : ''}
+          data-test="recently-link"
           to="/recently"
         >
           Recently
@@ -59,6 +61,7 @@ const MainNavigation = () => (
       <li>
         <LinkWithActive
           active={window.location.pathname === '/experience' ? 'active' : ''}
+          data-test="experience-link"
           to="/experience"
         >
           Experience
@@ -67,6 +70,7 @@ const MainNavigation = () => (
       <li>
         <LinkWithActive
           active={window.location.pathname === '/contact' ? 'active' : ''}
+          data-test="contact-link"
           to="/contact"
         >
           Contact

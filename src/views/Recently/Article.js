@@ -56,12 +56,17 @@ export class Article extends Component<Props> {
 
     return (
       <Wrapper>
-        <Link to="/recently">← Back</Link>
+        <Link data-test="back-link" to="/recently">
+          ← Back
+        </Link>
           <WrapperSmall>
             <header>
-              <H1 dangerouslySetInnerHTML={{ __html: title.rendered }} />
-                <Small
-                  dangerouslySetInnerHTML={{
+              <H1
+                dangerouslySetInnerHTML={{ __html: title.rendered }}
+                data-test="article-title"
+            />
+              <Small
+                dangerouslySetInnerHTML={{
                 __html: dateFormatted.toLocaleDateString('en-EN', options),
               }}
             />
