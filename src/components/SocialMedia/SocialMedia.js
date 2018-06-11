@@ -12,7 +12,8 @@ const Section = styled.section`
   position: relative;
 
   & ul {
-    width: 60%;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,7 +28,7 @@ const Section = styled.section`
   }
 `
 const Icon = styled.i`
-  font-size: 3rem;
+  font-size: 5vw;
   color: #fff;
   margin-right: 1rem;
 `
@@ -35,9 +36,9 @@ const Icon = styled.i`
 const Circle = styled.div`
   position: absolute;
   left: calc(50% - 25px);
-  bottom: -15px;
-  width: 70px;
-  height: 50px;
+  bottom: -1.5vw;
+  width: 7vw;
+  height: 5vw;
   border-radius: 50%;
   background: #3a1c71;
 `
@@ -46,6 +47,14 @@ const Img = styled.img`
   position: absolute;
   right: 2%;
   bottom: 10%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+
+  @media (min-width: 800px) {
+    visibility: visible;
+    opacity: 1;
+  }
 `
 
 const SocialMedia = () => (

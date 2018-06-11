@@ -7,6 +7,7 @@ import Icon from '../../Icon'
 const Nav = styled.nav`
   display: flex;
   align-items: center;
+  padding-top: 1rem;
 
   & ul {
     display: flex;
@@ -22,6 +23,10 @@ const Nav = styled.nav`
     & :hover {
       border-bottom: 4px solid white;
     }
+  }
+
+  @media (min-width: 540px) {
+    padding: 0;
   }
 `
 

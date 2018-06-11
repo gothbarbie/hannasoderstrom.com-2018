@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import imgComputer from '../../images/computer.jpg'
 import imgHanna from '../../images/hanna2018.jpg'
+import imgKristina from '../../images/kristina.jpg'
 
 import SocialMedia from '../../components/SocialMedia'
 import H2 from '../../components/H2'
@@ -84,6 +85,8 @@ const Quote = styled.p`
 
 const Name = styled.p`
   font-size: 0.9rem;
+  line-height: 1.4rem;
+  text-align: center;
 `
 
 const Home = () => (
@@ -120,14 +123,19 @@ const Home = () => (
     </AboutMe>
     <Quotes>
       <Quoter>
-        <SmallAvatar alt="Hanna Söderström" src={imgHanna} />
+        <SmallAvatar alt="Kristina Herngren" src={imgKristina} />
         <Quote>
           <em>
-            &quot;Hanna is a great innovator and a fun person to work
-            with!&quot;
+            &quot;Jag har arbetat med Hanna i grupper som utvecklar
+            företagskultur och -struktur. Hanna är lyhörd, smart och engagerad
+            och bidrar med sin närvaro starkt till upplevelsen av att jobba på
+            Iteam.&quot;
           </em>
         </Quote>
-        <Name>- Someone</Name>
+        <Name>
+          Kristina Herngren<br />
+          Agency Director at Iteam Solutions AB
+        </Name>
       </Quoter>
       <Quoter>
         <SmallAvatar alt="Hanna Söderström" src={imgHanna} />
