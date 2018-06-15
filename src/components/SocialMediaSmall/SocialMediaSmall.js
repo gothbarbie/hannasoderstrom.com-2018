@@ -27,6 +27,10 @@ const Section = styled.section`
 const Icon = styled.i`
   font-size: 2rem;
   color: #fff;
+
+  @media (min-width: 1700px) {
+    font-size: 2vw;
+  }
 `
 
 const SocialMediaSmall = () => (

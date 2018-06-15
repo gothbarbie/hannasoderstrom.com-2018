@@ -18,6 +18,23 @@ const WrapperSmall = styled.section`
   max-width: 600px;
   margin: 5% auto;
   padding: 0 2rem;
+
+  p {
+    line-height: 150%;
+    font-weight: 300;
+    color: #4f4f4f;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+`
+
+const Header = styled.header`
+  margin-bottom: 2rem;
 `
 
 type Props = {
@@ -60,7 +77,7 @@ export class Article extends Component<Props> {
           ← Back
         </Link>
           <WrapperSmall>
-            <header>
+            <Header>
               <H1
                 dangerouslySetInnerHTML={{ __html: title.rendered }}
                 data-test="article-title"
@@ -70,7 +87,7 @@ export class Article extends Component<Props> {
                 __html: dateFormatted.toLocaleDateString('en-EN', options),
               }}
             />
-            </header>
+            </Header>
               <main
                 className="main"
                 dangerouslySetInnerHTML={{ __html: content.rendered }}
@@ -92,4 +109,7 @@ const mapDispatchToProps = {
   fetchRecently,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Article))
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(Article))

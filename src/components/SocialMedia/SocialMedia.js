@@ -13,7 +13,7 @@ const Section = styled.section`
 
   & ul {
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -31,6 +31,10 @@ const Icon = styled.i`
   font-size: 5vw;
   color: #fff;
   margin-right: 1rem;
+
+  @media (min-width: 1100px) {
+    font-size: 4rem;
+  }
 `
 
 const Circle = styled.div`
@@ -51,7 +55,7 @@ const Img = styled.img`
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
 
-  @media (min-width: 800px) {
+  @media (min-width: 950px) {
     visibility: visible;
     opacity: 1;
   }

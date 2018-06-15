@@ -14,7 +14,7 @@ const Footer = styled.footer`
   position: relative;
 
   @media (min-width: 800px) {
-    padding: 5% 2%;
+    padding: 5% 0;
   }
 `
 
@@ -30,12 +30,16 @@ const Linked = styled(Link)`
 
 const Img = styled.img`
   position: absolute;
-  right: 15%;
-  top: 20%;
+  right: 14%;
+  top: -10%;
   display: none;
 
   @media (min-width: 640px) {
     display: block;
+  }
+
+  @media (min-width: 800px) {
+    top: -40%;
   }
 `
 
@@ -47,6 +51,7 @@ const FooterWrapper = styled.div`
   margin: 0 auto;
   padding: 1rem 4%;
   flex-wrap: wrap;
+  position: relative;
 
   nav {
     margin-top: 5%;
@@ -89,8 +94,8 @@ const MainFooter = () => (
         <SocialMediaSmall />
       </LeftArea>
       <MainNavigation />
+      <Img src={imgTheresMore} />
     </FooterWrapper>
-    <Img src={imgTheresMore} />
   </Footer>
 )
 

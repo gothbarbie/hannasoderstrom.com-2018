@@ -34,7 +34,9 @@ const MainHeader = () => {
           <Logo />
         </Link>
         <MainNavigation />
-        <HeroComments src={imgHeroComments} />
+        {window.location.pathname === '/' && (
+          <HeroComments src={imgHeroComments} />
+        )}
       </Wrapper>
     </Header>
   )

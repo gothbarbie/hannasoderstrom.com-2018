@@ -33,17 +33,27 @@ const H1 = styled.h1`
 
 const AboutMe = styled.section`
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-column-gap: 10%;
-  align-items: center;
-  margin: 10% auto;
+  grid-template-columns: 1fr;
   width: 70%;
+  margin: 10% auto;
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 10%;
+    align-items: center;
+  }
 `
 
 const Avatar = styled.img`
   border-radius: 50%;
   width: 100%;
+  max-width: 200px;
   height: auto;
+  margin: 0 auto 4vw;
+
+  @media (min-width: 1000px) {
+    max-width: 100%;
+  }
 `
 
 const SmallAvatar = styled.img`
@@ -57,8 +67,16 @@ const Quotes = styled.section`
   display: grid;
   justify-content: center;
   padding: 5%;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 6%;
+
+  @media (min-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `
 
 const Quoter = styled.article`
