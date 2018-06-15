@@ -10,24 +10,14 @@ import SocialMedia from '../../components/SocialMedia'
 import H2 from '../../components/H2'
 import Paragraph from '../../components/Paragraph'
 
-import imgHeroComments from '../../images/menu-comments.svg'
-
 const Hero = styled.section`
   background: url(${imgComputer});
-  background-size: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  object-fit: contain;
+  background-size: cover;
   position: relative;
-`
-
-const HeroComments = styled.img`
-  position: absolute;
-  top: 1%;
-  right: 2%;
-  width: 350px;
 `
 
 const H1 = styled.h1`
@@ -92,7 +82,6 @@ const Name = styled.p`
 const Home = () => (
   <section>
     <Hero>
-      <HeroComments src={imgHeroComments} />
       <H1 data-test="title">
         Hi there, I'm Hanna!<br />
         I build web applications. :-)
@@ -136,26 +125,6 @@ const Home = () => (
           Kristina Herngren<br />
           Agency Director at Iteam Solutions AB
         </Name>
-      </Quoter>
-      <Quoter>
-        <SmallAvatar alt="Hanna Söderström" src={imgHanna} />
-        <Quote>
-          <em>
-            &quot;Hanna is a great innovator and a fun person to work
-            with!&quot;
-          </em>
-        </Quote>
-        <Name>- Someone</Name>
-      </Quoter>
-      <Quoter>
-        <SmallAvatar alt="Hanna Söderström" src={imgHanna} />
-        <Quote>
-          <em>
-            &quot;Hanna is a great innovator and a fun person to work
-            with!&quot;
-          </em>
-        </Quote>
-        <Name>- Someone</Name>
       </Quoter>
     </Quotes>
   </section>

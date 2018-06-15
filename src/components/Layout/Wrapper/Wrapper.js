@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   padding: 1rem 4%;
   flex-wrap: wrap;
+  position: relative;
 
   @media (min-width: 540px) {
     justify-content: space-between;

@@ -25,7 +25,7 @@ const Nav = styled.nav`
     }
   }
 
-  @media (min-width: 540px) {
+  @media (min-width: 800px) {
     padding: 0;
   }
 `

@@ -8,12 +8,12 @@ const Section = styled.section`
 
   & ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
 
   & li {
-    margin: 0 25%;
+    margin: 0 4vw 0 0;
   }
 
   & a {

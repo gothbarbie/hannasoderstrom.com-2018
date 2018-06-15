@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 const LogoStyled = styled.div`
   color: #fff;
+  text-align: right;
 `
 
 const WebDeveloper = styled.div`
-  text-align: right;
   font-size: 0.8rem;
 `
 
