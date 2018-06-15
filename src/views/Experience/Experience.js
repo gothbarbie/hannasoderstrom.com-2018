@@ -18,6 +18,18 @@ import imgCSS3 from '../../images/css3.png'
 import imgPS from '../../images/ps.png'
 import imgPR from '../../images/pr.png'
 import imgPHP from '../../images/php.png'
+import imgCocaCola from '../../images/cocacola.png'
+import imgPepsi from '../../images/pepsi.png'
+import imgMercedes from '../../images/mercedes.png'
+import imgCaptainMorgan from '../../images/captainmorgan.jpg'
+import imgGoT from '../../images/got.png'
+import imgBBC from '../../images/bbc.png'
+import imgReuters from '../../images/reuters.png'
+import imgAdidas from '../../images/adidas.png'
+import imgBurgerKing from '../../images/burgerking.png'
+import imgMcDonalds from '../../images/mcdonalds.png'
+import imgCK from '../../images/ck.png'
+import imgHaS from '../../images/headandshoulders.png'
 
 import Wrapper from '../../components/Layout/Wrapper'
 import Small from '../../components/Small'
@@ -40,7 +52,10 @@ const Article = styled.article`
 `
 const Main = styled.main`
   display: block;
-  margin-top: 2rem;
+
+  p:first-of-type {
+    margin-top: 0;
+  }
 `
 const Img = Image.extend`
   width: 80%;
@@ -137,8 +152,22 @@ const Experience = () => (
           </Logos>
           <Paragraph>
             We worked with hundreds of famous brands. These are just the ones at
-            the top of my head.
+            the top of my head:
           </Paragraph>
+          <Logos>
+            <Logo alt="CocaCola" maxWidth="140" src={imgCocaCola} />
+            <Logo alt="Pepsi" maxWidth="120" src={imgPepsi} />
+            <Logo alt="Mercedes-Benz" maxWidth="160" src={imgMercedes} />
+            <Logo alt="CaptainMorgan" maxWidth="100" src={imgCaptainMorgan} />
+            <Logo alt="GameOfThrones" maxWidth="150" src={imgGoT} />
+            <Logo alt="BBC" maxWidth="120" src={imgBBC} />
+            <Logo alt="Reuters" maxWidth="150" src={imgReuters} />
+            <Logo alt="Adidas" maxWidth="110" src={imgAdidas} />
+            <Logo alt="BurgerKing" maxWidth="100" src={imgBurgerKing} />
+            <Logo alt="McDonalds" maxWidth="120" src={imgMcDonalds} />
+            <Logo alt="CK" maxWidth="120" src={imgCK} />
+            <Logo alt="Head and Shoulders" maxWidth="130" src={imgHaS} />
+          </Logos>
         </Main>
       </Article>
     </Column>

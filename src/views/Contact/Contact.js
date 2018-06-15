@@ -10,8 +10,12 @@ import imgHanna from '../../images/hanna2018.jpg'
 
 const Grid = styled.section`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 10%;
+
+  @media (min-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `
 
 const FirstColumn = styled.div`
@@ -25,7 +29,11 @@ const SecondColumn = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10rem;
+  padding: 2rem;
+
+  @media (min-width: 700px) {
+    padding: 10rem 0 0 0;
+  }
 `
 
 const Avatar = styled.img`

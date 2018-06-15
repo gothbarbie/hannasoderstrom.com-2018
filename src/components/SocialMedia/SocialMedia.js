@@ -25,6 +25,10 @@ const Section = styled.section`
     justify-content: center;
     align-items: center;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `
 const Icon = styled.i`
@@ -39,10 +43,10 @@ const Icon = styled.i`
 
 const Circle = styled.div`
   position: absolute;
-  left: calc(50% - 25px);
-  bottom: -1.5vw;
+  left: calc(50% - 3.5vw);
+  bottom: -1vw;
   width: 7vw;
-  height: 5vw;
+  height: 3vw;
   border-radius: 50%;
   background: #3a1c71;
 `

@@ -28,6 +28,10 @@ const Icon = styled.i`
   font-size: 2rem;
   color: #fff;
 
+  &:hover {
+    color: #eee;
+  }
+
   @media (min-width: 1700px) {
     font-size: 2vw;
   }

@@ -119,8 +119,8 @@ const Home = () => (
           developer.
         </Paragraph>
         <Paragraph>
-          Now I build awesome web applications and find really cool solutions to
-          problems most people can’t imagine! ;)
+          Now I work with teams building awesome web applications and find
+          really cool solutions to problems most people can’t imagine! ;)
         </Paragraph>
         <Paragraph>
           Want more specific examples and details?{' '}
