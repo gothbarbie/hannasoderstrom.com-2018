@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import imgIteam from '../../images/iteam.png'
 import imgWidespace from '../../images/widespace.png'
+import imgHannaSoderstrom from '../../images/hannasoderstrom.png'
 
 import imgJS from '../../images/js.png'
 import imgReact from '../../images/react.png'
@@ -30,25 +31,38 @@ import imgBurgerKing from '../../images/burgerking.png'
 import imgMcDonalds from '../../images/mcdonalds.png'
 import imgCK from '../../images/ck.png'
 import imgHaS from '../../images/headandshoulders.png'
+import imgWordPress from '../../images/wordpress.png'
+
+import imgStarfucked from '../../images/websites/starfucked.png'
+import imgChrisPoland from '../../images/websites/chrispoland.png'
+import imgBillyLundevall from '../../images/websites/billylundevall.png'
+import imgRDE from '../../images/websites/rde.png'
+import imgDanielKopp from '../../images/websites/danielkopp.png'
 
 import Wrapper from '../../components/Layout/Wrapper'
 import Small from '../../components/Small'
 import Paragraph from '../../components/Paragraph'
 import Image from '../../components/Image'
+import Tag from '../../components/Tag'
+import H3 from '../../components/H3'
 
 const Column = styled.section`
   display: flex;
   flex-direction: column;
 `
-const Article = styled.article`
+const WorkPlace = styled.article`
   width: 100%;
   display: grid;
   padding: 2rem 0;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 2fr;
   grid-column-gap: 10%;
   grid-row-gap: 5%;
   align-items: start;
+
+  @media (min-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `
 const Main = styled.main`
   display: block;
@@ -70,13 +84,34 @@ const Logo = Image.extend`
   margin: 1rem;
 `
 
+const Website = styled.article`
+  margin: 4vw 0;
+
+  header {
+    padding-bottom: 1rem;
+  }
+
+  main {
+    padding-bottom: 1rem;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+
+    & span {
+      margin: 0.25rem;
+    }
+  }
+`
+
 const Experience = () => (
   <Wrapper>
     <Column>
-      <Article>
+      <WorkPlace>
         <header>
           <Img alt="Iteam" src={imgIteam} />
-          <Small>Aug 2016 - Current</Small>
+          <Small>Aug 2016 - Today</Small>
         </header>
         <Main>
           <Paragraph>
@@ -113,8 +148,8 @@ const Experience = () => (
             <Logo alt="Vimla" maxWidth="170" src={imgVimla} />
           </Logos>
         </Main>
-      </Article>
-      <Article>
+      </WorkPlace>
+      <WorkPlace>
         <header>
           <Img alt="Widespace" src={imgWidespace} />
           <Small>Feb 2015 - Aug 2016</Small>
@@ -169,7 +204,150 @@ const Experience = () => (
             <Logo alt="Head and Shoulders" maxWidth="130" src={imgHaS} />
           </Logos>
         </Main>
-      </Article>
+      </WorkPlace>
+      <WorkPlace>
+        <header>
+          <Img alt="Hanna Söderström" src={imgHannaSoderstrom} />
+          <Small>Jan 2012 - Feb 2015</Small>
+        </header>
+        <Main>
+          <Paragraph>
+            My history with design and graphics actually goes all the way back
+            to when I was twelve and first came in contact with Photoshop
+            (version 5 at the time).
+          </Paragraph>
+          <Paragraph>
+            Even before that I was drawing and writing music, learning to play
+            several different instruments (trombone, piano, drums). I come from
+            a very creative family and music and artistic creativity has always
+            been close to my heart.
+          </Paragraph>
+          <Paragraph>
+            I started out my career on the web designing websites and gradually
+            learning how to adapt and later create my own WordPress-themes from
+            scratch.
+          </Paragraph>
+          <Logos>
+            <Logo alt="HTML5" maxWidth="88" src={imgHTML5} />
+            <Logo alt="CSS3" maxWidth="100" src={imgCSS3} />
+            <Logo alt="PHP" maxWidth="150" src={imgPHP} />
+            <Logo alt="WordPress" maxWidth="150" src={imgWordPress} />
+            <Logo alt="Photoshop" maxWidth="70" src={imgPS} />
+          </Logos>
+          <Paragraph>
+            I made a lot of websites for all sort of smaller businesses, models,
+            artists and other clients in need of portfolios and similar
+            websites.
+          </Paragraph>
+          <Paragraph>Here are a few of the more noteworthy:</Paragraph>
+          <Website>
+            <header>
+              <H3>
+                <strong>Starfucked</strong> | Fetish Model
+              </H3>
+              <em>Design and building of WordPress Theme</em>
+            </header>
+            <main>
+              <img alt="Starfucked" src={imgStarfucked} width="100%" />
+            </main>
+            <footer>
+              <Tag>2014</Tag>
+              <Tag>Design</Tag>
+              <Tag>WordPress</Tag>
+              <Tag>PHP</Tag>
+              <Tag>HTML</Tag>
+              <Tag>CSS</Tag>
+              <Tag>Responsive</Tag>
+            </footer>
+          </Website>
+          <Website>
+            <header>
+              <H3>
+                <strong>Chris Poland</strong> | Guitar Player, Artist
+              </H3>
+              <em>
+                Design and building of WordPress Theme based on album cover
+              </em>
+            </header>
+            <main>
+              <img alt="Chris Poland" src={imgChrisPoland} width="100%" />
+            </main>
+            <footer>
+              <Tag>2012</Tag>
+              <Tag>Design</Tag>
+              <Tag>WordPress</Tag>
+              <Tag>PHP</Tag>
+              <Tag>MySQL</Tag>
+              <Tag>HTML</Tag>
+              <Tag>CSS</Tag>
+            </footer>
+          </Website>
+          <Website>
+            <header>
+              <H3>
+                <strong>Billy Lundevall</strong> | Illustrator, 3D Artist
+              </H3>
+              <em>Design and building of WordPress Theme</em>
+            </header>
+            <main>
+              <img alt="Billy Lundevall" src={imgBillyLundevall} width="100%" />
+            </main>
+            <footer>
+              <Tag>2013</Tag>
+              <Tag>WordPress</Tag>
+              <Tag>HTML</Tag>
+              <Tag>CSS</Tag>
+            </footer>
+          </Website>
+          <Website>
+            <header>
+              <H3>
+                <strong>rde Connects</strong> | Connectors for advanced
+                technical equipment
+              </H3>
+              <em>
+                Design and building of Website and Administration System for
+                Searchable Catalog
+              </em>
+            </header>
+            <main>
+              <img alt="rde Connects" src={imgRDE} width="100%" />
+            </main>
+            <footer>
+              <Tag>2013</Tag>
+              <Tag>2014</Tag>
+              <Tag>Design</Tag>
+              <Tag>PHP</Tag>
+              <Tag>MySQL</Tag>
+              <Tag>jQuery</Tag>
+              <Tag>GoogleAPI</Tag>
+              <Tag>HTML</Tag>
+              <Tag>CSS</Tag>
+            </footer>
+          </Website>
+          <Website>
+            <header>
+              <H3>
+                <strong>Daniel Kopp</strong> | 3D/VFX Artist
+              </H3>
+              <em>Design and building of Website</em>
+            </header>
+            <main>
+              <img alt="Daniel Kopp" src={imgDanielKopp} width="100%" />
+            </main>
+            <footer>
+              <Tag>2013</Tag>
+              <Tag>Design</Tag>
+              <Tag>WordPress</Tag>
+              <Tag>PHP</Tag>
+              <Tag>MySQL</Tag>
+              <Tag>HTML</Tag>
+              <Tag>CSS</Tag>
+              <Tag>Responsive</Tag>
+            </footer>
+          </Website>
+        </Main>
+      </WorkPlace>
     </Column>
   </Wrapper>
 )

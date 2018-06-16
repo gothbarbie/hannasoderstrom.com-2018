@@ -3,10 +3,9 @@
 exports[`views/Home renders 1`] = `
 <section>
   <styled.section>
-    <styled.img
-      src="menu-comments.svg"
-    />
-    <styled.h1>
+    <styled.h1
+      data-test="title"
+    >
       Hi there, I'm Hanna!
       <br />
       I build web applications. :-)
@@ -29,7 +28,7 @@ exports[`views/Home renders 1`] = `
         I grew up, someone made the Internet and I eventually became a web developer.
       </styled.p>
       <styled.p>
-        Now I build awesome web applications and find really cool solutions to problems most people can’t imagine! ;)
+        Now I work with teams building awesome web applications and find really cool solutions to problems most people can’t imagine! ;)
       </styled.p>
       <styled.p>
         Want more specific examples and details?
@@ -47,44 +46,18 @@ exports[`views/Home renders 1`] = `
   <styled.section>
     <styled.article>
       <styled.img
-        alt="Hanna Söderström"
-        src="hanna2018.jpg"
+        alt="Kristina Herngren"
+        src="kristina.jpg"
       />
       <styled.p>
         <em>
-          "Hanna is a great innovator and a fun person to work with!"
+          "Jag har arbetat med Hanna i grupper som utvecklar företagskultur och -struktur. Hanna är lyhörd, smart och engagerad och bidrar med sin närvaro starkt till upplevelsen av att jobba på Iteam."
         </em>
       </styled.p>
       <styled.p>
-        - Someone
-      </styled.p>
-    </styled.article>
-    <styled.article>
-      <styled.img
-        alt="Hanna Söderström"
-        src="hanna2018.jpg"
-      />
-      <styled.p>
-        <em>
-          "Hanna is a great innovator and a fun person to work with!"
-        </em>
-      </styled.p>
-      <styled.p>
-        - Someone
-      </styled.p>
-    </styled.article>
-    <styled.article>
-      <styled.img
-        alt="Hanna Söderström"
-        src="hanna2018.jpg"
-      />
-      <styled.p>
-        <em>
-          "Hanna is a great innovator and a fun person to work with!"
-        </em>
-      </styled.p>
-      <styled.p>
-        - Someone
+        Kristina Herngren
+        <br />
+        Agency Director at Iteam Solutions AB
       </styled.p>
     </styled.article>
   </styled.section>

@@ -130,8 +130,70 @@ exports[`views/Experience renders 1`] = `
           />
         </styled.section>
         <styled.p>
-          We worked with hundreds of famous brands. These are just the ones at the top of my head.
+          We worked with hundreds of famous brands. These are just the ones at the top of my head:
         </styled.p>
+        <styled.section>
+          <styled.img
+            alt="CocaCola"
+            maxWidth="140"
+            src="cocacola.png"
+          />
+          <styled.img
+            alt="Pepsi"
+            maxWidth="120"
+            src="pepsi.png"
+          />
+          <styled.img
+            alt="Mercedes-Benz"
+            maxWidth="160"
+            src="mercedes.png"
+          />
+          <styled.img
+            alt="CaptainMorgan"
+            maxWidth="100"
+            src="captainmorgan.jpg"
+          />
+          <styled.img
+            alt="GameOfThrones"
+            maxWidth="150"
+            src="got.png"
+          />
+          <styled.img
+            alt="BBC"
+            maxWidth="120"
+            src="bbc.png"
+          />
+          <styled.img
+            alt="Reuters"
+            maxWidth="150"
+            src="reuters.png"
+          />
+          <styled.img
+            alt="Adidas"
+            maxWidth="110"
+            src="adidas.png"
+          />
+          <styled.img
+            alt="BurgerKing"
+            maxWidth="100"
+            src="burgerking.png"
+          />
+          <styled.img
+            alt="McDonalds"
+            maxWidth="120"
+            src="mcdonalds.png"
+          />
+          <styled.img
+            alt="CK"
+            maxWidth="120"
+            src="ck.png"
+          />
+          <styled.img
+            alt="Head and Shoulders"
+            maxWidth="130"
+            src="headandshoulders.png"
+          />
+        </styled.section>
       </styled.main>
     </styled.article>
   </styled.section>

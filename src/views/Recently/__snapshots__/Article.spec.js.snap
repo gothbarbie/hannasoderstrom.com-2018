@@ -5,19 +5,21 @@ exports[`views/Article renders when no content 1`] = `""`;
 exports[`views/Article renders with content 1`] = `
 <styled.div>
   <Link
+    data-test="back-link"
     replace={false}
     to="/recently"
   >
     ← Back
   </Link>
   <styled.section>
-    <header>
+    <styled.header>
       <styled.h1
         dangerouslySetInnerHTML={
           Object {
             "__html": "Hello",
           }
         }
+        data-test="article-title"
       />
       <styled.small
         dangerouslySetInnerHTML={
@@ -26,7 +28,7 @@ exports[`views/Article renders with content 1`] = `
           }
         }
       />
-    </header>
+    </styled.header>
     <main
       className="main"
       dangerouslySetInnerHTML={
