@@ -49,7 +49,7 @@ const Avatar = styled.img`
   width: 100%;
   max-width: 200px;
   height: auto;
-  margin: 0 auto 4vw;
+  margin: 0 auto 2vw;
 
   @media (min-width: 1000px) {
     max-width: 100%;

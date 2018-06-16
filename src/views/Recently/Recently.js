@@ -34,7 +34,7 @@ const Grid = styled.section`
 `
 
 const Article = styled.article`
-  margin: 1rem 0;
+  margin: 3rem 0;
 
   p {
     line-height: 150%;
@@ -105,7 +105,10 @@ export class Recently extends Component<Props> {
           <Linked to={`recently/${slug}`}>
             <H2 dangerouslySetInnerHTML={{ __html: title.rendered }} />
             {item.media && (
-              <img alt="image" src={item.media && item.media.guid.rendered} />
+              <img
+                alt={title.rendered}
+                src={item.media && item.media.guid.rendered}
+              />
             )}
               <Small
                 dangerouslySetInnerHTML={{

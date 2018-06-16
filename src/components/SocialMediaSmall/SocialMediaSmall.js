@@ -27,9 +27,23 @@ const Section = styled.section`
 const Icon = styled.i`
   font-size: 2rem;
   color: #fff;
+  animation-name: spin;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.13, 0.85, 1, 0.4);
 
   &:hover {
     color: #eee;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
+
+    to {
+      transform: rotateY(360deg);
+    }
   }
 
   @media (min-width: 1700px) {
