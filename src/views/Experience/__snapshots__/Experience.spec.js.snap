@@ -10,7 +10,7 @@ exports[`views/Experience renders 1`] = `
           src="iteam.png"
         />
         <styled.small>
-          Aug 2016 - Current
+          Aug 2016 - Today
         </styled.small>
       </header>
       <styled.main>
@@ -194,6 +194,276 @@ exports[`views/Experience renders 1`] = `
             src="headandshoulders.png"
           />
         </styled.section>
+      </styled.main>
+    </styled.article>
+    <styled.article>
+      <header>
+        <styled.img
+          alt="Hanna Söderström"
+          src="hannasoderstrom.png"
+        />
+        <styled.small>
+          Jan 2012 - Feb 2015
+        </styled.small>
+      </header>
+      <styled.main>
+        <styled.p>
+          My history with design and graphics actually goes all the way back to when I was twelve and first came in contact with Photoshop (version 5 at the time).
+        </styled.p>
+        <styled.p>
+          Even before that I was drawing and writing music, learning to play several different instruments (trombone, piano, drums). I come from a very creative family and music and artistic creativity has always been close to my heart.
+        </styled.p>
+        <styled.p>
+          I started out my career on the web designing websites and gradually learning how to adapt and later create my own WordPress-themes from scratch.
+        </styled.p>
+        <styled.section>
+          <styled.img
+            alt="HTML5"
+            maxWidth="88"
+            src="html5.png"
+          />
+          <styled.img
+            alt="CSS3"
+            maxWidth="100"
+            src="css3.png"
+          />
+          <styled.img
+            alt="PHP"
+            maxWidth="150"
+            src="php.png"
+          />
+          <styled.img
+            alt="WordPress"
+            maxWidth="150"
+            src="wordpress.png"
+          />
+          <styled.img
+            alt="Photoshop"
+            maxWidth="70"
+            src="ps.png"
+          />
+        </styled.section>
+        <styled.p>
+          I made a lot of websites for all sort of smaller businesses, models, artists and other clients in need of portfolios and similar websites.
+        </styled.p>
+        <styled.p>
+          Here are a few of the more noteworthy:
+        </styled.p>
+        <styled.article>
+          <header>
+            <styled.h3>
+              <strong>
+                Starfucked
+              </strong>
+               | Fetish Model
+            </styled.h3>
+            <em>
+              Design and building of WordPress Theme
+            </em>
+          </header>
+          <main>
+            <img
+              alt="Starfucked"
+              src="starfucked.png"
+              width="100%"
+            />
+          </main>
+          <footer>
+            <styled.span>
+              2014
+            </styled.span>
+            <styled.span>
+              Design
+            </styled.span>
+            <styled.span>
+              WordPress
+            </styled.span>
+            <styled.span>
+              PHP
+            </styled.span>
+            <styled.span>
+              HTML
+            </styled.span>
+            <styled.span>
+              CSS
+            </styled.span>
+            <styled.span>
+              Responsive
+            </styled.span>
+          </footer>
+        </styled.article>
+        <styled.article>
+          <header>
+            <styled.h3>
+              <strong>
+                Chris Poland
+              </strong>
+               | Guitar Player, Artist
+            </styled.h3>
+            <em>
+              Design and building of WordPress Theme based on album cover
+            </em>
+          </header>
+          <main>
+            <img
+              alt="Chris Poland"
+              src="chrispoland.png"
+              width="100%"
+            />
+          </main>
+          <footer>
+            <styled.span>
+              2012
+            </styled.span>
+            <styled.span>
+              Design
+            </styled.span>
+            <styled.span>
+              WordPress
+            </styled.span>
+            <styled.span>
+              PHP
+            </styled.span>
+            <styled.span>
+              MySQL
+            </styled.span>
+            <styled.span>
+              HTML
+            </styled.span>
+            <styled.span>
+              CSS
+            </styled.span>
+          </footer>
+        </styled.article>
+        <styled.article>
+          <header>
+            <styled.h3>
+              <strong>
+                Billy Lundevall
+              </strong>
+               | Illustrator, 3D Artist
+            </styled.h3>
+            <em>
+              Design and building of WordPress Theme
+            </em>
+          </header>
+          <main>
+            <img
+              alt="Billy Lundevall"
+              src="billylundevall.png"
+              width="100%"
+            />
+          </main>
+          <footer>
+            <styled.span>
+              2013
+            </styled.span>
+            <styled.span>
+              WordPress
+            </styled.span>
+            <styled.span>
+              HTML
+            </styled.span>
+            <styled.span>
+              CSS
+            </styled.span>
+          </footer>
+        </styled.article>
+        <styled.article>
+          <header>
+            <styled.h3>
+              <strong>
+                rde Connects
+              </strong>
+               | Connectors for advanced technical equipment
+            </styled.h3>
+            <em>
+              Design and building of Website and Administration System for Searchable Catalog
+            </em>
+          </header>
+          <main>
+            <img
+              alt="rde Connects"
+              src="rde.png"
+              width="100%"
+            />
+          </main>
+          <footer>
+            <styled.span>
+              2013
+            </styled.span>
+            <styled.span>
+              2014
+            </styled.span>
+            <styled.span>
+              Design
+            </styled.span>
+            <styled.span>
+              PHP
+            </styled.span>
+            <styled.span>
+              MySQL
+            </styled.span>
+            <styled.span>
+              jQuery
+            </styled.span>
+            <styled.span>
+              GoogleAPI
+            </styled.span>
+            <styled.span>
+              HTML
+            </styled.span>
+            <styled.span>
+              CSS
+            </styled.span>
+          </footer>
+        </styled.article>
+        <styled.article>
+          <header>
+            <styled.h3>
+              <strong>
+                Daniel Kopp
+              </strong>
+               | 3D/VFX Artist
+            </styled.h3>
+            <em>
+              Design and building of Website
+            </em>
+          </header>
+          <main>
+            <img
+              alt="Daniel Kopp"
+              src="danielkopp.png"
+              width="100%"
+            />
+          </main>
+          <footer>
+            <styled.span>
+              2013
+            </styled.span>
+            <styled.span>
+              Design
+            </styled.span>
+            <styled.span>
+              WordPress
+            </styled.span>
+            <styled.span>
+              PHP
+            </styled.span>
+            <styled.span>
+              MySQL
+            </styled.span>
+            <styled.span>
+              HTML
+            </styled.span>
+            <styled.span>
+              CSS
+            </styled.span>
+            <styled.span>
+              Responsive
+            </styled.span>
+          </footer>
+        </styled.article>
       </styled.main>
     </styled.article>
   </styled.section>

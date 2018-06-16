@@ -1,9 +1,11 @@
 import axios from 'axios'
 
-import { SET_RECENTLIES, LOADING } from './types'
+import { SET_RECENTLIES, LOADING, SET_ERROR, RESET_ERROR } from './types'
 
 export const fetchRecentlies = () => async dispatch => {
+  dispatch({ type: RESET_ERROR })
   dispatch({ type: LOADING, payload: true })
+
   try {
     Promise.resolve(
       await axios.get('http://hannasoderstrom.com/admin/wp-json/wp/v2/posts')
@@ -28,10 +30,10 @@ export const fetchRecentlies = () => async dispatch => {
           )
       )
       .then(res => dispatch({ type: SET_RECENTLIES, payload: res }))
-
-    // dispatch({ type: SET_RECENTLIES, payload: data })
   } catch (error) {
-    throw new Error(error)
+    Promise.resolve(error).then(res =>
+      dispatch({ type: SET_ERROR, payload: res })
+    )
   }
   dispatch({ type: LOADING, payload: false })
 }
@@ -47,7 +49,7 @@ export const fetchRecently = slug => async dispatch => {
 
     dispatch({ type: SET_RECENTLIES, payload: data })
   } catch (error) {
-    throw new Error(error)
+    dispatch({ type: SET_ERROR, payload: error.data.message })
   }
   dispatch({ type: LOADING, payload: false })
 }

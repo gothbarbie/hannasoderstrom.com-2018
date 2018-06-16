@@ -133,9 +133,9 @@ const Home = () => (
         <SmallAvatar alt="Kristina Herngren" src={imgKristina} />
         <Quote>
           <em>
-            &quot;Jag har arbetat med Hanna i grupper som utvecklar
-            företagskultur och -struktur. Hanna är lyhörd, smart och engagerad
-            och bidrar med sin närvaro starkt till upplevelsen av att jobba på
+            &quot;I have worked with Hanna in groups developing business culture
+            and structure. Hanna is keen and responsive, smart and engaged and
+            her presence strongly contributes to the experience of working at
             Iteam.&quot;
           </em>
         </Quote>

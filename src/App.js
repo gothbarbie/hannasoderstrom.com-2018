@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import ScrollToTop from './components/ScrollToTop'
 import MainHeader from './components/Layout/MainHeader'
+import Error from './components/Error'
 import MainFooter from './components/Layout/MainFooter'
 
 import Home from './views/Home'
@@ -36,6 +37,7 @@ const App = () => (
           <Route component={Experience} exact path="/experience" />
           <Route component={Contact} exact path="/contact" />
           <Route component={NotFound404} path="/not-found" />
+          <Error />
         </Main>
         <MainFooter />
       </ScrollToTop>
