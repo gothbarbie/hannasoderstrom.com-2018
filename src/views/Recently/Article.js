@@ -14,6 +14,8 @@ import Small from '../../components/Small'
 
 import './Article.css'
 
+import type { RouterHistory } from 'react-router-dom'
+
 const WrapperSmall = styled.section`
   max-width: 600px;
   margin: 5% auto;
@@ -40,10 +42,24 @@ const Header = styled.header`
 type Props = {
   loading: boolean,
   fetchRecently: Function,
-  history: {
-    push: Function,
-  },
-  recentlies: Array<{}>,
+  history: RouterHistory,
+  recentlies: Array<{
+    content: {
+      rendered: string,
+    },
+    excerpt: {
+      rendered: string,
+    },
+    date: string,
+    title: {
+      rendered: string,
+    },
+    media: {
+      guid?: {
+        rendered: string,
+      },
+    },
+  }>,
 }
 
 export class Article extends Component<Props> {

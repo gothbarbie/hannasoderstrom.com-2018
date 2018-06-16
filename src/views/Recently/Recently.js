@@ -10,6 +10,8 @@ import Wrapper from '../../components/Layout/Wrapper'
 import LoadingSpinner from '../../components/LoadingSpinner'
 import Small from '../../components/Small'
 
+import type { RecentlyType } from '../../types'
+
 const Grid = styled.section`
   width: 100%;
   display: grid;
@@ -73,7 +75,7 @@ const H2 = styled.h2`
 type Props = {
   loading: boolean,
   fetchRecentlies: Function,
-  recentlies: Array<{}>,
+  recentlies: RecentlyType[],
 }
 
 export class Recently extends Component<Props> {

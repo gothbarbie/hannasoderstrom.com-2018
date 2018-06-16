@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import { Recently } from './Recently'
-import { fetchRecentlies } from '../../actions/index'
 
 describe('views/Recently', () => {
   let component
@@ -36,6 +35,7 @@ describe('views/Recently', () => {
           id: 1,
           title: { rendered: 'Hello' },
           content: { rendered: '<p>Hello world</p>' },
+          media: { rendered: 'http://www.image.com/image01.jpg' },
         },
       ],
     })
