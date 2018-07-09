@@ -34,8 +34,16 @@ describe('views/Recently', () => {
         {
           id: 1,
           title: { rendered: 'Hello' },
+          excerpt: {
+            rendered: '<p>Hello</p>',
+          },
+          date: 'today',
           content: { rendered: '<p>Hello world</p>' },
-          media: { rendered: 'http://www.image.com/image01.jpg' },
+          media: {
+            guid: {
+              rendered: 'http://www.image.com/image01.jpg',
+            },
+          },
         },
       ],
     })

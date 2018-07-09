@@ -7,12 +7,16 @@ import MainHeader from './components/Layout/MainHeader'
 import Error from './components/Error'
 import MainFooter from './components/Layout/MainFooter'
 
-import Home from './views/Home'
-import Recently from './views/Recently'
-import RecentlyArticle from './views/Recently/Article'
-import Experience from './views/Experience'
-import Contact from './views/Contact'
-import NotFound404 from './views/NotFound404/NotFound404'
+import asyncComponent from './components/AsyncComponent/AsyncComponent'
+
+const Home = asyncComponent(() => import('./views/Home'))
+const Recently = asyncComponent(() => import('./views/Recently'))
+const RecentlyArticle = asyncComponent(() => import('./views/Recently/Article'))
+const Experience = asyncComponent(() => import('./views/Experience'))
+const Contact = asyncComponent(() => import('./views/Contact'))
+const NotFound404 = asyncComponent(() =>
+  import('./views/NotFound404/NotFound404')
+)
 
 const AppWrapper = styled.div`
   display: flex;

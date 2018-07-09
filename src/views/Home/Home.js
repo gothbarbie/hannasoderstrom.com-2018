@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import imgComputer from '../../images/computer.jpg'
+import imgComputer400 from '../../images/bg/computer_400.jpg'
+import imgComputer1000 from '../../images/bg/computer_1000.jpg'
+import imgComputer1500 from '../../images/bg/computer_1500.jpg'
 import imgHanna from '../../images/hanna2018.jpg'
 import imgKristina from '../../images/kristina.jpg'
 
@@ -11,13 +13,21 @@ import H2 from '../../components/H2'
 import Paragraph from '../../components/Paragraph'
 
 const Hero = styled.section`
-  background: url(${imgComputer});
+  background-image: url(${imgComputer400});
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
   position: relative;
+
+  @media (min-width: 550px) {
+    background-image: url(${imgComputer1000});
+  }
+
+  @media (min-width: 1200px) {
+    background-image: url(${imgComputer1500});
+  }
 `
 
 const H1 = styled.h1`

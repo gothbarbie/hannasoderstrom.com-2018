@@ -3,26 +3,51 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
     <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#ffffff">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-      crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    
+    <title>Hanna Söderström - Web Developer</title>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Portfolio of Hanna Söderström, System Developer." /> 
+    <meta name="twitter:site" content="@devHannasoderstrom" /> 
+    <meta name="og:description" content="Portfolio of Hanna Söderström, System Developer." />
+    <meta name="og:url" content="https://www.hannasoderstrom.com" />
+    <meta name="og:site_name" content="Hanna Söderström" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
       crossorigin="anonymous"></script>
-    <title>Hanna Söderström - Web Developer</title>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    <script>
+      const loadSecondaryCSS = src => {
+        if (document.createStylesheet) {
+          document.createStylesheet(src)
+        } else {
+          const stylesheet = document.createElement('link')
+          stylesheet.href= src 
+          stylesheet.type = 'text/css'
+          stylesheet.rel = 'stylesheet'
+          document.getElementsByTagName('head')[0].appendChild(stylesheet)
+        }
+      }
+      window.onload = function() {
+        loadSecondaryCSS('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700')
+        loadSecondaryCSS('https://fonts.googleapis.com/css?family=Shadows+Into+Light')
+      }
+    </script>
   </body>
 </html>

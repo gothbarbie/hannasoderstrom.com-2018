@@ -1,37 +1,37 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import imgIteam from '../../images/iteam.png'
-import imgWidespace from '../../images/widespace.png'
-import imgHannaSoderstrom from '../../images/hannasoderstrom.png'
+import imgIteam from '../../images/logos/iteam.png'
+import imgWidespace from '../../images/logos/widespace.png'
+import imgHannaSoderstrom from '../../images/logos/hannasoderstrom.png'
 
-import imgJS from '../../images/js.png'
-import imgReact from '../../images/react.png'
-import imgReactNative from '../../images/reactnative.png'
-import imgVue from '../../images/vue.png'
-import imgNode from '../../images/node.png'
-import imgWebpack from '../../images/webpack.png'
-import imgTaxiSthlm from '../../images/taxisthlm.png'
-import imgMSF from '../../images/msf.png'
-import imgVimla from '../../images/vimla.png'
-import imgHTML5 from '../../images/html5.png'
-import imgCSS3 from '../../images/css3.png'
-import imgPS from '../../images/ps.png'
-import imgPR from '../../images/pr.png'
-import imgPHP from '../../images/php.png'
-import imgCocaCola from '../../images/cocacola.png'
-import imgPepsi from '../../images/pepsi.png'
-import imgMercedes from '../../images/mercedes.png'
-import imgCaptainMorgan from '../../images/captainmorgan.jpg'
-import imgGoT from '../../images/got.png'
-import imgBBC from '../../images/bbc.png'
-import imgReuters from '../../images/reuters.png'
-import imgAdidas from '../../images/adidas.png'
-import imgBurgerKing from '../../images/burgerking.png'
-import imgMcDonalds from '../../images/mcdonalds.png'
-import imgCK from '../../images/ck.png'
-import imgHaS from '../../images/headandshoulders.png'
-import imgWordPress from '../../images/wordpress.png'
+import imgJS from '../../images/logos/js.svg'
+import imgReact from '../../images/logos/react.png'
+import imgReactNative from '../../images/logos/reactnative.png'
+import imgVue from '../../images/logos/vue.svg'
+import imgNode from '../../images/logos/node.png'
+import imgWebpack from '../../images/logos/webpack.png'
+import imgTaxiSthlm from '../../images/logos/taxisthlm.png'
+import imgMSF from '../../images/logos/msf.png'
+import imgVimla from '../../images/logos/vimla.png'
+import imgHTML5 from '../../images/logos/html5.svg'
+import imgCSS3 from '../../images/logos/css3.svg'
+import imgPS from '../../images/logos/ps.png'
+import imgPR from '../../images/logos/pr.png'
+import imgPHP from '../../images/logos/php.png'
+import imgCocaCola from '../../images/logos/cocacola.png'
+import imgPepsi from '../../images/logos/pepsi.png'
+import imgMercedes from '../../images/logos/mercedes.png'
+import imgCaptainMorgan from '../../images/logos/captainmorgan.jpg'
+import imgGoT from '../../images/logos/got.png'
+import imgBBC from '../../images/logos/bbc.png'
+import imgReuters from '../../images/logos/reuters.png'
+import imgAdidas from '../../images/logos/adidas.png'
+import imgBurgerKing from '../../images/logos/burgerking.png'
+import imgMcDonalds from '../../images/logos/mcdonalds.png'
+import imgCK from '../../images/logos/ck.png'
+import imgHaS from '../../images/logos/headandshoulders.png'
+import imgWordPress from '../../images/logos/wordpress.svg'
 
 import imgStarfucked from '../../images/websites/starfucked.png'
 import imgChrisPoland from '../../images/websites/chrispoland.png'
@@ -178,11 +178,11 @@ const Experience = () => (
             them ourselves.
           </Paragraph>
           <Logos>
-            <Logo alt="JavaScript" maxWidth="60" src={imgJS} />
-            <Logo alt="HTML5" maxWidth="70" src={imgHTML5} />
-            <Logo alt="CSS3" maxWidth="80" src={imgCSS3} />
-            <Logo alt="Photoshop" maxWidth="60" src={imgPS} />
-            <Logo alt="Premiere" maxWidth="60" src={imgPR} />
+            <Logo alt="JavaScript" maxWidth="70" src={imgJS} />
+            <Logo alt="HTML5" maxWidth="95" src={imgHTML5} />
+            <Logo alt="CSS3" maxWidth="70" src={imgCSS3} />
+            <Logo alt="Photoshop" maxWidth="70" src={imgPS} />
+            <Logo alt="Premiere" maxWidth="70" src={imgPR} />
             <Logo alt="PHP" maxWidth="150" src={imgPHP} />
           </Logos>
           <Paragraph>
@@ -228,10 +228,10 @@ const Experience = () => (
             scratch.
           </Paragraph>
           <Logos>
-            <Logo alt="HTML5" maxWidth="88" src={imgHTML5} />
-            <Logo alt="CSS3" maxWidth="100" src={imgCSS3} />
+            <Logo alt="HTML5" maxWidth="95" src={imgHTML5} />
+            <Logo alt="CSS3" maxWidth="70" src={imgCSS3} />
             <Logo alt="PHP" maxWidth="150" src={imgPHP} />
-            <Logo alt="WordPress" maxWidth="150" src={imgWordPress} />
+            <Logo alt="WordPress" maxWidth="100" src={imgWordPress} />
             <Logo alt="Photoshop" maxWidth="70" src={imgPS} />
           </Logos>
           <Paragraph>
