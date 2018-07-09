@@ -6,6 +6,7 @@ import imgComputer400 from '../../images/bg/computer_400.jpg'
 import imgComputer1000 from '../../images/bg/computer_1000.jpg'
 import imgComputer1500 from '../../images/bg/computer_1500.jpg'
 import imgHanna from '../../images/hanna2018.jpg'
+import imgHanna300 from '../../images/hanna2018-300.jpg'
 import imgKristina from '../../images/kristina.jpg'
 
 import SocialMedia from '../../components/SocialMedia'
@@ -54,15 +55,19 @@ const AboutMe = styled.section`
   }
 `
 
-const Avatar = styled.img`
+const Avatar = styled.div`
+  background-image: url(${imgHanna300});
+  background-size: cover;
   border-radius: 50%;
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+  width: 20vw;
+  height: 20vw;
+  min-width: 200px;
+  min-height: 200px;
   margin: 0 auto 2vw;
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1600px) {
     max-width: 100%;
+    background-image: url(${imgHanna});
   }
 `
 
@@ -117,7 +122,7 @@ const Home = () => (
     </Hero>
     <SocialMedia />
     <AboutMe>
-      <Avatar alt="Hanna Söderström" src={imgHanna} />
+      <Avatar />
       <div>
         <H2>About me</H2>
         <Paragraph>
