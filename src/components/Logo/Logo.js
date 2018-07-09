@@ -26,7 +26,7 @@ const LogoSmall = styled.div`
 `
 
 const Logo = () => (
-  <div>
+  <a href="/">
     <LogoBig>
       <strong>Hanna</strong>Söderström
       <WebDeveloper>|Web Developer</WebDeveloper>
@@ -34,7 +34,7 @@ const Logo = () => (
     <LogoSmall>
       <strong>H</strong>S
     </LogoSmall>
-  </div>
+  </a>
 )
 
 export default Logo

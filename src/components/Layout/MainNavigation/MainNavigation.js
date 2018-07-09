@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -37,47 +37,64 @@ const LinkWithActive = HomeLinkWithActive.extend`
   padding-bottom: 0.375rem;
 `
 
-const MainNavigation = () => (
-  <Nav>
-    <ul>
-      <li>
-        <HomeLinkWithActive
-          active={window.location.pathname === '/' ? 'active' : ''}
-          data-test="home-link"
-          to="/"
-        >
-          <Icon name="home" />
-        </HomeLinkWithActive>
-      </li>
-      <li>
-        <LinkWithActive
-          active={window.location.pathname === '/recently' ? 'active' : ''}
-          data-test="recently-link"
-          to="/recently"
-        >
-          Recently
-        </LinkWithActive>
-      </li>
-      <li>
-        <LinkWithActive
-          active={window.location.pathname === '/experience' ? 'active' : ''}
-          data-test="experience-link"
-          to="/experience"
-        >
-          Experience
-        </LinkWithActive>
-      </li>
-      <li>
-        <LinkWithActive
-          active={window.location.pathname === '/contact' ? 'active' : ''}
-          data-test="contact-link"
-          to="/contact"
-        >
-          Contact
-        </LinkWithActive>
-      </li>
-    </ul>
-  </Nav>
-)
+class MainNavigation extends Component {
+  constructor () {
+    super()
+
+    this.state = {
+      currentRoute: window.location.pathname,
+    }
+  }
+
+  shouldComponentUpdate (nextProps, nextState) {
+    return nextState.currentRoute !== this.state.currentRoute
+  }
+
+  render () {
+    const { currentRoute } = this.state
+    return (
+      <Nav>
+        <ul>
+          <li>
+            <HomeLinkWithActive
+              active={currentRoute === '/' ? 'active' : ''}
+              data-test="home-link"
+              to="/"
+            >
+              <Icon name="home" />
+            </HomeLinkWithActive>
+          </li>
+            <li>
+              <LinkWithActive
+                active={currentRoute === '/recently' ? 'active' : ''}
+                data-test="recently-link"
+                to="/recently"
+            >
+              Recently
+              </LinkWithActive>
+            </li>
+              <li>
+                <LinkWithActive
+                  active={currentRoute === '/experience' ? 'active' : ''}
+                  data-test="experience-link"
+                  to="/experience"
+            >
+              Experience
+                </LinkWithActive>
+              </li>
+                <li>
+                  <LinkWithActive
+                    active={currentRoute === '/contact' ? 'active' : ''}
+                    data-test="contact-link"
+                    to="/contact"
+            >
+              Contact
+                  </LinkWithActive>
+                </li>
+        </ul>
+      </Nav>
+    )
+  }
+}
 
 export default MainNavigation

@@ -11,10 +11,16 @@ import registerServiceWorker from './registerServiceWorker'
 
 const store = configureStore() // initial state can be passed here
 
+if (process.env.NODE_ENV !== 'production') {
+  const { whyDidYouUpdate } = require('why-did-you-update')
+  whyDidYouUpdate(React)
+}
 
 render(
   <Provider store={store}>
     <App />
-  </Provider>, document.getElementById('root'))
+  </Provider>,
+  document.getElementById('root')
+)
 
 registerServiceWorker()

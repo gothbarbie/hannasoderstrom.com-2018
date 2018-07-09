@@ -1,6 +1,5 @@
 // @flow
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Wrapper from '../Wrapper'
@@ -30,10 +29,8 @@ const MainHeader = () => {
   return (
     <Header>
       <Wrapper>
-        <Link to="/">
-          <Logo />
-        </Link>
-        <MainNavigation />
+        <Logo />
+        <MainNavigation currentPath={window.location.pathname} />
         {window.location.pathname === '/' && (
           <HeroComments src={imgHeroComments} />
         )}

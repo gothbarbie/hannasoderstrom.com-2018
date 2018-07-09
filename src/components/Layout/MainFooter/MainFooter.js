@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Logo from '../../Logo'
@@ -18,7 +17,7 @@ const Footer = styled.footer`
   }
 `
 
-const Linked = styled(Link)`
+const LogoStyle = styled.div`
   text-decoration: none;
   margin-bottom: 3vw;
   align-self: flex-start;
@@ -88,9 +87,9 @@ const MainFooter = () => (
   <Footer>
     <FooterWrapper>
       <LeftArea>
-        <Linked to="/">
+        <LogoStyle>
           <Logo />
-        </Linked>
+        </LogoStyle>
         <SocialMediaSmall />
       </LeftArea>
       <MainNavigation />
