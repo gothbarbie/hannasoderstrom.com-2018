@@ -13,10 +13,7 @@ exports[`views/Home renders 1`] = `
   </styled.section>
   <SocialMedia />
   <styled.section>
-    <styled.img
-      alt="Hanna Söderström"
-      src="hanna2018.jpg"
-    />
+    <styled.div />
     <div>
       <styled.h2>
         About me

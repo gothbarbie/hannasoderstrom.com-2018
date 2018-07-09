@@ -1,2 +1,2 @@
-import NotFound404 from './404'
+import NotFound404 from './NotFound404'
 export default NotFound404

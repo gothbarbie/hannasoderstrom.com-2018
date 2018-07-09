@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 
-import { SET_RECENTLIES, LOADING } from './types'
+import { SET_RECENTLIES } from './types'
 import { fetchRecentlies, fetchRecently } from './index'
 
 import axios from 'axios'

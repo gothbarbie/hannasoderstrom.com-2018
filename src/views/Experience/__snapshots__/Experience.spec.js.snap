@@ -24,7 +24,7 @@ exports[`views/Experience renders 1`] = `
           <styled.img
             alt="JavaScript"
             maxWidth="60"
-            src="js.png"
+            src="js.svg"
           />
           <styled.img
             alt="React"
@@ -39,7 +39,7 @@ exports[`views/Experience renders 1`] = `
           <styled.img
             alt="Vue"
             maxWidth="50"
-            src="vue.png"
+            src="vue.svg"
           />
           <styled.img
             alt="NodeJS"
@@ -100,27 +100,27 @@ exports[`views/Experience renders 1`] = `
         <styled.section>
           <styled.img
             alt="JavaScript"
-            maxWidth="60"
-            src="js.png"
+            maxWidth="70"
+            src="js.svg"
           />
           <styled.img
             alt="HTML5"
-            maxWidth="70"
-            src="html5.png"
+            maxWidth="95"
+            src="html5.svg"
           />
           <styled.img
             alt="CSS3"
-            maxWidth="80"
-            src="css3.png"
+            maxWidth="70"
+            src="css3.svg"
           />
           <styled.img
             alt="Photoshop"
-            maxWidth="60"
+            maxWidth="70"
             src="ps.png"
           />
           <styled.img
             alt="Premiere"
-            maxWidth="60"
+            maxWidth="70"
             src="pr.png"
           />
           <styled.img
@@ -219,13 +219,13 @@ exports[`views/Experience renders 1`] = `
         <styled.section>
           <styled.img
             alt="HTML5"
-            maxWidth="88"
-            src="html5.png"
+            maxWidth="95"
+            src="html5.svg"
           />
           <styled.img
             alt="CSS3"
-            maxWidth="100"
-            src="css3.png"
+            maxWidth="70"
+            src="css3.svg"
           />
           <styled.img
             alt="PHP"
@@ -234,8 +234,8 @@ exports[`views/Experience renders 1`] = `
           />
           <styled.img
             alt="WordPress"
-            maxWidth="150"
-            src="wordpress.png"
+            maxWidth="100"
+            src="wordpress.svg"
           />
           <styled.img
             alt="Photoshop"

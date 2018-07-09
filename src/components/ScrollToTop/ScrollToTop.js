@@ -7,7 +7,7 @@ type Props = {
   children: Object,
 }
 
-class ScrollToTop extends Component<Props> {
+export class ScrollToTop extends Component<Props> {
   componentDidUpdate (prevProps) {
     if (this.props.location !== prevProps.location) {
       window.scrollTo(0, 0)

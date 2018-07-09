@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import NotFound404 from './NotFound404'
+import NotFound404 from './index'
 
 let component
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Contact from './Contact'
+import Contact from './index'
 
 describe('views/Contact', () => {
   let component
