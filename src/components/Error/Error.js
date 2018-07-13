@@ -10,6 +10,11 @@ import Wrapper from '../Layout/Wrapper'
 import H1 from '../H1'
 import Paragraph from '../Paragraph'
 
+type error = {
+  error: true,
+  message: { response: { status: 404 } },
+}
+
 const ErrorContainer = styled.section`
   p:last-of-type {
     margin-top: 0;
@@ -35,7 +40,7 @@ const Img = styled.img`
   border-radius: 5vw;
 `
 
-const Error = ({ error }) => {
+export const Error = ({ error }: error) => {
   if (!error.error) return null
 
   const { message } = error

@@ -8,6 +8,7 @@ import imgComputer1500 from '../../images/bg/computer_1500.jpg'
 import imgHanna from '../../images/hanna2018.jpg'
 import imgHanna300 from '../../images/hanna2018-300.jpg'
 import imgKristina from '../../images/kristina.jpg'
+import imgRebecca from '../../images/rebecca.jpg'
 
 import SocialMedia from '../../components/SocialMedia'
 import H2 from '../../components/H2'
@@ -157,6 +158,24 @@ const Home = () => (
         <Name>
           Kristina Herngren<br />
           Agency Director at Iteam Solutions AB
+        </Name>
+      </Quoter>
+      <Quoter>
+        <SmallAvatar alt="Rebecca Norén" src={imgRebecca} />
+        <Quote>
+          <em>
+            &quot;In my role as an UX designer I have worked in several projects
+            together with Hanna. I have appreciated working together with Hanna,
+            she is keen, pays attention to details and she is solution-oriented.
+            She has great engagement when solving problems and she works
+            actively to better cooperation between different roles in the teams.
+            She is a fantastic colleague and she has great potential. I give her
+            my greatest recommendations in her future endeavors.&quot;
+          </em>
+        </Quote>
+        <Name>
+          Rebecca Norén<br />
+          UX Designer at Iteam Solutions AB
         </Name>
       </Quoter>
     </Quotes>
