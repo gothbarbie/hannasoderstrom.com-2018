@@ -2,6 +2,10 @@ import { SET_RECENTLIES } from '../actions/types'
 import recentlies from './recentlies'
 
 describe('reducers/recentlies', () => {
+  it('returns initial state', () => {
+    expect(recentlies(undefined, [])).toEqual([])
+  })
+
   it('sets recentlies', () => {
     const recentliesContent = [
       {
