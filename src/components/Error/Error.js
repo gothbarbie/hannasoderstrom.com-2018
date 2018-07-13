@@ -10,9 +10,15 @@ import Wrapper from '../Layout/Wrapper'
 import H1 from '../H1'
 import Paragraph from '../Paragraph'
 
-type error = {
-  error: true,
-  message: { response: { status: 404 } },
+type MessageType = { response?: { status?: number } }
+
+type ErrorType = {
+  error: boolean,
+  message?: MessageType,
+}
+
+type ErrorProps = {
+  error: ErrorType,
 }
 
 const ErrorContainer = styled.section`
@@ -40,8 +46,8 @@ const Img = styled.img`
   border-radius: 5vw;
 `
 
-export const Error = ({ error }: error) => {
-  if (!error.error) return null
+export const Error = ({ error }: ErrorProps) => {
+  if (!error.error || !error.message) return null
 
   const { message } = error
 

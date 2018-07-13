@@ -8,7 +8,7 @@ type Props = {
 }
 
 export class ScrollToTop extends Component<Props> {
-  componentDidUpdate (prevProps) {
+  componentDidUpdate (prevProps: Props) {
     if (this.props.location !== prevProps.location) {
       window.scrollTo(0, 0)
     }
