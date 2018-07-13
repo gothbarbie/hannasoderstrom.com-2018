@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Logo renders 1`] = `
+<a
+  href="/"
+>
+  <styled.div>
+    <strong>
+      Hanna
+    </strong>
+    Söderström
+    <styled.div>
+      |Web Developer
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <strong>
+      H
+    </strong>
+    S
+  </styled.div>
+</a>
+`;

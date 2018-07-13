@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/MainFooter renders 1`] = `
+<styled.footer>
+  <styled.div>
+    <styled.div>
+      <styled.div>
+        <Logo />
+      </styled.div>
+      <SocialMediaSmall />
+    </styled.div>
+    <MainNavigation />
+    <styled.img
+      src="theres-more.svg"
+    />
+  </styled.div>
+</styled.footer>
+`;

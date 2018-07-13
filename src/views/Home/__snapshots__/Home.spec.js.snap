@@ -57,6 +57,22 @@ exports[`views/Home renders 1`] = `
         Agency Director at Iteam Solutions AB
       </styled.p>
     </styled.article>
+    <styled.article>
+      <styled.img
+        alt="Rebecca Norén"
+        src="rebecca.jpg"
+      />
+      <styled.p>
+        <em>
+          "In my role as an UX designer I have worked in several projects together with Hanna. I have appreciated working together with Hanna, she is keen, pays attention to details and she is solution-oriented. She has great engagement when solving problems and she works actively to better cooperation between different roles in the teams. She is a fantastic colleague and she has great potential. I give her my greatest recommendations in her future endeavors."
+        </em>
+      </styled.p>
+      <styled.p>
+        Rebecca Norén
+        <br />
+        UX Designer at Iteam Solutions AB
+      </styled.p>
+    </styled.article>
   </styled.section>
 </section>
 `;
