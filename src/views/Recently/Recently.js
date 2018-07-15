@@ -106,7 +106,7 @@ export class Recently extends Component<Props> {
         >
           <Linked to={`recently/${slug}`}>
             <H2 dangerouslySetInnerHTML={{ __html: title.rendered }} />
-            {item.media && (
+            {item.media.guid.rendered.length > 0 && (
               <img
                 alt={title.rendered}
                 src={item.media && item.media.guid.rendered}

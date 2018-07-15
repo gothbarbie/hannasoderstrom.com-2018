@@ -29,7 +29,26 @@ export const fetchRecentlies = () => async dispatch => {
             })
           )
       )
-      .then(res => dispatch({ type: SET_RECENTLIES, payload: res }))
+      .then(res => {
+        const filtered = res.map(item => {
+          return {
+            id: item.id,
+            title: item.title,
+            content: item.content,
+            date: item.date,
+            excerpt: item.excerpt,
+            media: {
+              guid: {
+                rendered:
+                  item.media && item.media.guid.rendered
+                    ? item.media.guid.rendered
+                    : '',
+              },
+            },
+          }
+        })
+        return dispatch({ type: SET_RECENTLIES, payload: filtered })
+      })
   } catch (error) {
     Promise.resolve(error).then(res =>
       dispatch({ type: SET_ERROR, payload: res })

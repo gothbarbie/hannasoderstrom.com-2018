@@ -2,13 +2,12 @@ import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import rootReducer from '../reducers'
+import stateValidator from '../middlewares/stateValidator'
 
 export default function configureStore (initialState) {
   return createStore(
-    rootReducer, 
-    initialState, 
-    composeWithDevTools(
-      applyMiddleware(thunk)
-    )
+    rootReducer,
+    initialState,
+    composeWithDevTools(applyMiddleware(thunk, stateValidator))
   )
 }
