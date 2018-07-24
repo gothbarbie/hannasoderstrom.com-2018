@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import styled from 'styled-components'
 
 import ScrollToTop from './components/ScrollToTop'
-import MainHeader from './components/Layout/MainHeader'
 import Error from './components/Error'
-import MainFooter from './components/Layout/MainFooter'
 
 import asyncComponent from './components/AsyncComponent/AsyncComponent'
 
@@ -24,26 +22,17 @@ const AppWrapper = styled.div`
   min-height: 100vh;
 `
 
-const Main = styled.main`
-  display: block;
-  flex: 1;
-`
-
 const App = () => (
   <Router>
     <AppWrapper>
       <ScrollToTop>
-        <MainHeader />
-        <Main>
-          <Route component={Home} exact path="/" />
-          <Route component={Recently} exact path="/recently" />
-          <Route component={RecentlyArticle} path="/recently/:title" />
-          <Route component={Experience} exact path="/experience" />
-          <Route component={Contact} exact path="/contact" />
-          <Route component={NotFound404} path="/not-found" />
-          <Error />
-        </Main>
-        <MainFooter />
+        <Route component={Home} exact path="/" />
+        <Route component={Recently} exact path="/news" />
+        <Route component={RecentlyArticle} path="/news/:title" />
+        <Route component={Experience} exact path="/work" />
+        <Route component={Contact} exact path="/contact" />
+        <Route component={NotFound404} path="/not-found" />
+        <Error />
       </ScrollToTop>
     </AppWrapper>
   </Router>
