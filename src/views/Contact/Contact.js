@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Wrapper from '../../components/Layout/Wrapper'
-import H1 from '../../components/H1'
-import Paragraph from '../../components/Paragraph'
+import H1 from '../../components/Typography/H1'
+import P from '../../components/Typography/P'
 import Icon from '../../components/Icon'
 
 import imgHanna from '../../images/hanna2018.jpg'
@@ -49,10 +49,10 @@ const Contact = () => (
     <Grid>
       <FirstColumn>
         <H1>Contact</H1>
-        <Paragraph>
+        <P>
           If you want to get in touch with me, you can send me an email or
           contact me via social media.
-        </Paragraph>
+        </P>
         <Avatar alt="Hanna" src={imgHanna} />
       </FirstColumn>
       <SecondColumn>

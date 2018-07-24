@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/MainHeader renders 1`] = `
+<styled.header>
+  <styled.div
+    maxWidth="1340px"
+  >
+    <Logo />
+    <MainNavigation
+      currentPath="/"
+    />
+    <SocialMedia />
+  </styled.div>
+</styled.header>
+`;

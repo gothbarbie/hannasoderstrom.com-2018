@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Error renders 1`] = `
+<section
+  class="sc-bxivhb btGVcU"
+>
+  <div
+    class="sc-bdVaJa fohUwm"
+  >
+    <h1
+      class="sc-bwzfXH MAjgz"
+    >
+      Sorry!
+    </h1>
+    <p
+      class="sc-ifAKCX eydVvC"
+    >
+      Could not retrieve content. This is most likely a temporary issue.
+    </p>
+    <p
+      class="sc-htpNat gLyeie"
+    >
+      (Please enjoy this cute panda cub instead)
+    </p>
+    <img
+      alt="sad panda"
+      class="sc-EHOje btkFze"
+      src="sadpanda.gif"
+    >
+      
+    </img>
+  </div>
+</section>
+`;

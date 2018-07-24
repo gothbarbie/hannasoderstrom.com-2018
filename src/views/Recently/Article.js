@@ -9,7 +9,7 @@ import { fetchRecently } from '../../actions'
 
 import Wrapper from '../../components/Layout/Wrapper'
 import LoadingSpinner from '../../components/LoadingSpinner'
-import H1 from '../../components/H1'
+import H1 from '../../components/Typography/H1'
 import Small from '../../components/Small'
 
 import './Article.css'
@@ -63,7 +63,7 @@ type Props = {
 }
 
 export class Article extends Component<Props> {
-  componentDidMount () {
+  componentDidMount() {
     const url = decodeURI(window.location.pathname).split('/')
     const slug = url[2]
     const regex = new RegExp(/([A-Za-z0-9-])+/g)
@@ -73,7 +73,7 @@ export class Article extends Component<Props> {
     }
   }
 
-  render () {
+  render() {
     if (this.props.loading) return <LoadingSpinner />
 
     if (!this.props.recentlies.length) return null
@@ -92,23 +92,23 @@ export class Article extends Component<Props> {
         <Link data-test="back-link" to="/recently">
           ← Back
         </Link>
-          <WrapperSmall>
-            <Header>
-              <H1
-                dangerouslySetInnerHTML={{ __html: title.rendered }}
-                data-test="article-title"
+        <WrapperSmall>
+          <Header>
+            <H1
+              dangerouslySetInnerHTML={{ __html: title.rendered }}
+              data-test="article-title"
             />
-              <Small
-                dangerouslySetInnerHTML={{
+            <Small
+              dangerouslySetInnerHTML={{
                 __html: dateFormatted.toLocaleDateString('en-EN', options),
               }}
             />
-            </Header>
-              <main
-                className="main"
-                dangerouslySetInnerHTML={{ __html: content.rendered }}
+          </Header>
+          <main
+            className="main"
+            dangerouslySetInnerHTML={{ __html: content.rendered }}
           />
-          </WrapperSmall>
+        </WrapperSmall>
       </Wrapper>
     )
   }

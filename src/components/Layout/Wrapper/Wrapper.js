@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  max-width: 1140px;
+  max-width: ${props => (props.maxWidth ? props.maxWidth : '1040px')};
   display: flex;
   flex-direction: ${({ column }) => column && 'column'};
   justify-content: space-between;

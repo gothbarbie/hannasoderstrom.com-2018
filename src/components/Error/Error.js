@@ -7,8 +7,8 @@ import { connect } from 'react-redux'
 import imgPanda from '../../images/sadpanda.gif'
 
 import Wrapper from '../Layout/Wrapper'
-import H1 from '../H1'
-import Paragraph from '../Paragraph'
+import H1 from '../Typography/H1'
+import P from '../Typography/P'
 
 type MessageType = { response?: { status?: number } }
 
@@ -72,9 +72,7 @@ export const Error = ({ error }: ErrorProps) => {
       <Wrapper column>
         <H1>{userFriendlyTitle}</H1>
         {userFriendlyMsg && <ErrorMessage>{userFriendlyMsg}</ErrorMessage>}
-        {userFriendlyMsg && (
-          <Paragraph>(Please enjoy this cute panda cub instead)</Paragraph>
-        )}
+        {userFriendlyMsg && <P>(Please enjoy this cute panda cub instead)</P>}
         {userFriendlyMsg && <Img alt="sad panda" src={imgPanda} />}
       </Wrapper>
     </ErrorContainer>

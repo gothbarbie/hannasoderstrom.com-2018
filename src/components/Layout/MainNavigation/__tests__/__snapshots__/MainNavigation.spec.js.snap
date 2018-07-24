@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/MainNavigation renders 1`] = `
+<styled.nav>
+  <ul>
+    <li>
+      <Styled(Link)
+        active="active"
+        data-test="home-link"
+        to="/"
+      >
+        About
+      </Styled(Link)>
+    </li>
+    <li>
+      <Styled(Link)
+        active=""
+        data-test="recently-link"
+        to="/news"
+      >
+        News
+      </Styled(Link)>
+    </li>
+    <li>
+      <Styled(Link)
+        active=""
+        data-test="experience-link"
+        to="/work"
+      >
+        Work
+      </Styled(Link)>
+    </li>
+    <li>
+      <Styled(Link)
+        active=""
+        data-test="contact-link"
+        to="/contact"
+      >
+        Contact
+      </Styled(Link)>
+    </li>
+  </ul>
+</styled.nav>
+`;

@@ -41,10 +41,10 @@ import imgDanielKopp from '../../images/websites/danielkopp.png'
 
 import Wrapper from '../../components/Layout/Wrapper'
 import Small from '../../components/Small'
-import Paragraph from '../../components/Paragraph'
+import P from '../../components/Typography/P'
 import Image from '../../components/Image'
 import Tag from '../../components/Tag'
-import H3 from '../../components/H3'
+import H3 from '../../components/Typography/H3'
 
 const Column = styled.section`
   display: flex;
@@ -114,7 +114,7 @@ const Experience = () => (
           <Small>Aug 2016 - Today</Small>
         </header>
         <Main>
-          <Paragraph>
+          <P>
             Culture, value and fun is the keywords for Iteam, where I work as a
             Web Developer. We work in an agile manner, in self-organising teams
             and in close relationship with our clients, to bring them value. Not
@@ -123,11 +123,11 @@ const Experience = () => (
             daily work, but the clients we take on, the projects we choose to be
             a part of and therefore also the dedication and eagerness with which
             we produce really great results for a wide range of businesses.
-          </Paragraph>
-          <Paragraph>
+          </P>
+          <P>
             My roles has been primarily focused on front end development so far,
             using technologies such as:
-          </Paragraph>
+          </P>
           <Logos>
             <Logo alt="JavaScript" maxWidth="60" src={imgJS} />
             <Logo alt="React" maxWidth="110" src={imgReact} />
@@ -136,12 +136,12 @@ const Experience = () => (
             <Logo alt="NodeJS" maxWidth="120" src={imgNode} />
             <Logo alt="Webpack" maxWidth="210" src={imgWebpack} />
           </Logos>
-          <Paragraph>
+          <P>
             I have grown in skill a great deal during the last year through my
             daily and continuous work with cutting edge technologies, working
             with really experienced and talented people in all areas of web
             development.
-          </Paragraph>
+          </P>
           <Logos>
             <Logo alt="Taxi Stockholm" maxWidth="120" src={imgTaxiSthlm} />
             <Logo alt="Doctors Without Borders" maxWidth="200" src={imgMSF} />
@@ -155,28 +155,28 @@ const Experience = () => (
           <Small>Feb 2015 - Aug 2016</Small>
         </header>
         <Main>
-          <Paragraph>
+          <P>
             Widespace provides a platform for mobile advertising all over
             Europe, connecting publishers with advertisers.
-          </Paragraph>
-          <Paragraph>
+          </P>
+          <P>
             I worked in the Studio team, a group with a wide range of skills
             doing everything from producing ads and new creative mobile ad
             formats to optimising ads from other medias for the mobile platform.
-          </Paragraph>
-          <Paragraph>
+          </P>
+          <P>
             We worked daily with very short deadlines, 100% performance
             accountability and served the greatest brands there is, our ads
             shown to millions of people daily and on the most saught after
             ad-spots. We focused not only on making ads seen but also to be
             engaging and fun with all the tools and sensors of modern mobile
             phones at our disposal.
-          </Paragraph>
-          <Paragraph>
+          </P>
+          <P>
             Since the mobile web depends on small sized content, we used mainly
             vanilla JavaScript with few additional tools unless we could build
             them ourselves.
-          </Paragraph>
+          </P>
           <Logos>
             <Logo alt="JavaScript" maxWidth="70" src={imgJS} />
             <Logo alt="HTML5" maxWidth="95" src={imgHTML5} />
@@ -185,10 +185,10 @@ const Experience = () => (
             <Logo alt="Premiere" maxWidth="70" src={imgPR} />
             <Logo alt="PHP" maxWidth="150" src={imgPHP} />
           </Logos>
-          <Paragraph>
+          <P>
             We worked with hundreds of famous brands. These are just the ones at
             the top of my head:
-          </Paragraph>
+          </P>
           <Logos>
             <Logo alt="CocaCola" maxWidth="140" src={imgCocaCola} />
             <Logo alt="Pepsi" maxWidth="120" src={imgPepsi} />
@@ -211,22 +211,22 @@ const Experience = () => (
           <Small>Jan 2012 - Feb 2015</Small>
         </header>
         <Main>
-          <Paragraph>
+          <P>
             My history with design and graphics actually goes all the way back
             to when I was twelve and first came in contact with Photoshop
             (version 5 at the time).
-          </Paragraph>
-          <Paragraph>
+          </P>
+          <P>
             Even before that I was drawing and writing music, learning to play
             several different instruments (trombone, piano, drums). I come from
             a very creative family and music and artistic creativity has always
             been close to my heart.
-          </Paragraph>
-          <Paragraph>
+          </P>
+          <P>
             I started out my career on the web designing websites and gradually
             learning how to adapt and later create my own WordPress-themes from
             scratch.
-          </Paragraph>
+          </P>
           <Logos>
             <Logo alt="HTML5" maxWidth="95" src={imgHTML5} />
             <Logo alt="CSS3" maxWidth="70" src={imgCSS3} />
@@ -234,12 +234,12 @@ const Experience = () => (
             <Logo alt="WordPress" maxWidth="100" src={imgWordPress} />
             <Logo alt="Photoshop" maxWidth="70" src={imgPS} />
           </Logos>
-          <Paragraph>
+          <P>
             I made a lot of websites for all sort of smaller businesses, models,
             artists and other clients in need of portfolios and similar
             websites.
-          </Paragraph>
-          <Paragraph>Here are a few of the more noteworthy:</Paragraph>
+          </P>
+          <P>Here are a few of the more noteworthy:</P>
           <Website>
             <header>
               <H3>

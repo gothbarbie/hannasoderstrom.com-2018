@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Logo from '../../Logo'
-import SocialMediaSmall from '../../SocialMediaSmall'
+import SocialMedia from '../../SocialMedia'
 import MainNavigation from '../MainNavigation'
 
 import imgTheresMore from '../../../images/theres-more.svg'
@@ -90,7 +90,7 @@ const MainFooter = () => (
         <LogoStyle>
           <Logo />
         </LogoStyle>
-        <SocialMediaSmall />
+        <SocialMedia />
       </LeftArea>
       <MainNavigation />
       <Img src={imgTheresMore} />

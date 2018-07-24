@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import Icon from '../../Icon'
-
 const Nav = styled.nav`
   display: flex;
   align-items: center;
@@ -15,7 +13,12 @@ const Nav = styled.nav`
   }
 
   & li {
-    margin: 0 0 0 3vw;
+    margin: 0 0 0 5.5vw;
+    font-size: 22px;
+  }
+
+  & li:first-of-type {
+    margin-left: 0;
   }
 
   & a {
@@ -26,11 +29,10 @@ const Nav = styled.nav`
 `
 
 const HomeLinkWithActive = styled(Link)`
-  color: ${({ active }) =>
-    active === 'active' ? '#fff' : 'rgba(255, 255, 255, 0.65)'};
+  color: #fff;
   text-decoration: none;
   border-bottom: ${({ active }) =>
-    active === 'active' ? '4px solid white' : ''};
+    active === 'active' ? '2px solid #EE307F' : ''};
 `
 
 const LinkWithActive = HomeLinkWithActive.extend`
@@ -38,7 +40,7 @@ const LinkWithActive = HomeLinkWithActive.extend`
 `
 
 class MainNavigation extends Component {
-  constructor () {
+  constructor() {
     super()
 
     this.state = {
@@ -46,11 +48,11 @@ class MainNavigation extends Component {
     }
   }
 
-  shouldComponentUpdate (nextProps, nextState) {
+  shouldComponentUpdate(nextProps, nextState) {
     return nextState.currentRoute !== this.state.currentRoute
   }
 
-  render () {
+  render() {
     const { currentRoute } = this.state
     return (
       <Nav>
@@ -61,36 +63,36 @@ class MainNavigation extends Component {
               data-test="home-link"
               to="/"
             >
-              <Icon name="home" />
+              About
             </HomeLinkWithActive>
           </li>
-            <li>
-              <LinkWithActive
-                active={currentRoute === '/recently' ? 'active' : ''}
-                data-test="recently-link"
-                to="/recently"
+          <li>
+            <LinkWithActive
+              active={currentRoute === '/news' ? 'active' : ''}
+              data-test="recently-link"
+              to="/news"
             >
-              Recently
-              </LinkWithActive>
-            </li>
-              <li>
-                <LinkWithActive
-                  active={currentRoute === '/experience' ? 'active' : ''}
-                  data-test="experience-link"
-                  to="/experience"
+              News
+            </LinkWithActive>
+          </li>
+          <li>
+            <LinkWithActive
+              active={currentRoute === '/work' ? 'active' : ''}
+              data-test="experience-link"
+              to="/work"
             >
-              Experience
-                </LinkWithActive>
-              </li>
-                <li>
-                  <LinkWithActive
-                    active={currentRoute === '/contact' ? 'active' : ''}
-                    data-test="contact-link"
-                    to="/contact"
+              Work
+            </LinkWithActive>
+          </li>
+          <li>
+            <LinkWithActive
+              active={currentRoute === '/contact' ? 'active' : ''}
+              data-test="contact-link"
+              to="/contact"
             >
               Contact
-                  </LinkWithActive>
-                </li>
+            </LinkWithActive>
+          </li>
         </ul>
       </Nav>
     )

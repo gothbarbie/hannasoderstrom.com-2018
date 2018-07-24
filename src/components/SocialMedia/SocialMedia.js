@@ -1,22 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import imgMoreAboutMe from '../../images/more-about-me.svg'
-
 const Section = styled.section`
-  background: #3a1c71;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 3%;
-  position: relative;
 
   & ul {
-    width: 100%;
-    max-width: 700px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    padding: 0;
+  }
+
+  & li {
+    margin: 0 3vw 0 0;
+  }
+
+  & li:last-of-type {
+    margin-right: 0;
   }
 
   & a {
@@ -25,43 +26,32 @@ const Section = styled.section`
     justify-content: center;
     align-items: center;
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 `
 const Icon = styled.i`
-  font-size: 5vw;
+  font-size: 2rem;
   color: #fff;
-  margin-right: 1rem;
+  animation-name: spin;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.13, 0.85, 1, 0.4);
 
-  @media (min-width: 1100px) {
-    font-size: 4rem;
+  &:hover {
+    color: #eee;
   }
-`
 
-const Circle = styled.div`
-  position: absolute;
-  left: calc(50% - 3.5vw);
-  bottom: -1vw;
-  width: 7vw;
-  height: 3vw;
-  border-radius: 50%;
-  background: #3a1c71;
-`
+  @keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
 
-const Img = styled.img`
-  position: absolute;
-  right: 2%;
-  bottom: 10%;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+    to {
+      transform: rotateY(360deg);
+    }
+  }
 
-  @media (min-width: 950px) {
-    visibility: visible;
-    opacity: 1;
+  @media (min-width: 1700px) {
+    font-size: 2vw;
   }
 `
 
@@ -69,29 +59,21 @@ const SocialMedia = () => (
   <Section>
     <ul>
       <li>
-        <a
-          data-test="github-link"
-          href="https://github.com/gothbarbie/hannasoderstrom.com-2018"
-        >
-          <Icon className="fab fa-github" /> Github
+        <a href="https://github.com/gothbarbie/hannasoderstrom.com-2018">
+          <Icon className="fab fa-github" />
         </a>
       </li>
       <li>
-        <a
-          data-test="linkedin-link"
-          href="https://www.linkedin.com/in/hannasoderstromwebdev/"
-        >
-          <Icon className="fab fa-linkedin" /> LinkedIn
+        <a href="https://www.linkedin.com/in/hannasoderstromwebdev/">
+          <Icon className="fab fa-linkedin" />
         </a>
       </li>
       <li>
-        <a data-test="medium-link" href="https://medium.com/@gothbarbie84">
-          <Icon className="fab fa-medium" /> Medium
+        <a href="https://medium.com/@gothbarbie84">
+          <Icon className="fab fa-medium" />
         </a>
       </li>
     </ul>
-    <Circle />
-    <Img src={imgMoreAboutMe} />
   </Section>
 )
 
