@@ -52,7 +52,7 @@ exports[`views/Home renders 1`] = `
         </styled.p>
       </styled.article>
     </styled.section>
-    <styled.div
+    <Styled(styled.div)
       column={true}
     >
       <styled.h2>
@@ -104,13 +104,13 @@ exports[`views/Home renders 1`] = `
          
         <Link
           replace={false}
-          to="/experience"
+          to="/work"
         >
-          Check out my experience
+          Check out my work
         </Link>
         .
       </styled.p>
-    </styled.div>
+    </Styled(styled.div)>
   </section>
   <MainFooter />
 </React.Fragment>

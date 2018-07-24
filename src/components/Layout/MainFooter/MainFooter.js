@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Logo from '../../Logo'
 import SocialMedia from '../../SocialMedia'
 import MainNavigation from '../MainNavigation'
+import Wrapper from '../Wrapper'
 
 import imgTheresMore from '../../../images/theres-more.svg'
 
@@ -42,58 +43,19 @@ const Img = styled.img`
   }
 `
 
-const FooterWrapper = styled.div`
-  max-width: 1140px;
-  display: flex;
-  flex-direction: ${({ column }) => column && 'column'};
-  justify-content: center;
-  margin: 0 auto;
+const FooterWrapper = styled(Wrapper)`
   padding: 1rem 4%;
   flex-wrap: wrap;
   position: relative;
-
-  nav {
-    margin-top: 5%;
-
-    @media (min-width: 640px) {
-      margin-top: 0;
-    }
-  }
-
-  section {
-    @media (min-width: 800px) {
-      margin-right: 5%;
-    }
-  }
-`
-
-const LeftArea = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media (min-width: 640px) {
-    align-items: start;
-  }
-
-  @media (min-width: 800px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 `
 
 const MainFooter = () => (
   <Footer>
-    <FooterWrapper>
-      <LeftArea>
-        <LogoStyle>
-          <Logo />
-        </LogoStyle>
-        <SocialMedia />
-      </LeftArea>
-      <MainNavigation />
-      <Img src={imgTheresMore} />
+    <FooterWrapper maxWidth="1340px">
+      <LogoStyle>
+        <Logo />
+      </LogoStyle>
+      <SocialMedia />
     </FooterWrapper>
   </Footer>
 )

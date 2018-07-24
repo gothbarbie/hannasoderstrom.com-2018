@@ -2,17 +2,13 @@
 
 exports[`components/MainFooter renders 1`] = `
 <styled.footer>
-  <styled.div>
+  <Styled(styled.div)
+    maxWidth="1340px"
+  >
     <styled.div>
-      <styled.div>
-        <Logo />
-      </styled.div>
-      <SocialMedia />
+      <Logo />
     </styled.div>
-    <MainNavigation />
-    <styled.img
-      src="theres-more.svg"
-    />
-  </styled.div>
+    <SocialMedia />
+  </Styled(styled.div)>
 </styled.footer>
 `;

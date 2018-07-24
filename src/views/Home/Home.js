@@ -120,6 +120,10 @@ const Name = styled.p`
   text-align: center;
 `
 
+const AboutMe = styled(Wrapper)`
+  margin: 6vw auto;
+`
+
 const Home = () => (
   <React.Fragment>
     <Header />
@@ -171,7 +175,7 @@ const Home = () => (
         </Quoter>
       </Quotes>
 
-      <Wrapper column>
+      <AboutMe column>
         <H2>About me</H2>
         <P>
           My journey on the web began in the mid 90’s when my dad brought our
@@ -254,9 +258,9 @@ const Home = () => (
         </P>
         <P>
           Want more specific examples and details?{' '}
-          <Link to="/experience">Check out my experience</Link>.
+          <Link to="/work">Check out my work</Link>.
         </P>
-      </Wrapper>
+      </AboutMe>
     </section>
     <Footer />
   </React.Fragment>
