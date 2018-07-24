@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 const H2 = styled.h2`
-  font-size: 2rem;
-  color: #000;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  color: #333;
+  font-weight: 200;
+  margin-bottom: 3rem;
 `
 
 export default H2
