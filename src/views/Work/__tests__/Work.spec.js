@@ -1,13 +1,13 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Experience from '../index'
+import Work from '../index'
 
-describe('views/Experience', () => {
+describe('views/Work', () => {
   let component
 
   beforeEach(() => {
-    component = shallow(<Experience />)
+    component = shallow(<Work />)
   })
 
   it('renders', () => {

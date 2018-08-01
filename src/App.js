@@ -10,7 +10,7 @@ import asyncComponent from './components/AsyncComponent/AsyncComponent'
 const Home = asyncComponent(() => import('./views/Home'))
 const Recently = asyncComponent(() => import('./views/Recently'))
 const RecentlyArticle = asyncComponent(() => import('./views/Recently/Article'))
-const Experience = asyncComponent(() => import('./views/Experience'))
+const Work = asyncComponent(() => import('./views/Work'))
 const Contact = asyncComponent(() => import('./views/Contact'))
 const NotFound404 = asyncComponent(() =>
   import('./views/NotFound404/NotFound404')
@@ -29,7 +29,7 @@ const App = () => (
         <Route component={Home} exact path="/" />
         <Route component={Recently} exact path="/news" />
         <Route component={RecentlyArticle} path="/news/:title" />
-        <Route component={Experience} exact path="/work" />
+        <Route component={Work} exact path="/work" />
         <Route component={Contact} exact path="/contact" />
         <Route component={NotFound404} path="/not-found" />
         <Error />
