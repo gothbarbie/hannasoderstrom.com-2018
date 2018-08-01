@@ -3,10 +3,7 @@ import styled from 'styled-components'
 
 import Logo from '../../Logo'
 import SocialMedia from '../../SocialMedia'
-import MainNavigation from '../MainNavigation'
 import Wrapper from '../Wrapper'
-
-import imgTheresMore from '../../../images/theres-more.svg'
 
 const Footer = styled.footer`
   padding: 2rem;
@@ -25,21 +22,6 @@ const LogoStyle = styled.div`
 
   @media (min-width: 800px) {
     margin-bottom: 0;
-  }
-`
-
-const Img = styled.img`
-  position: absolute;
-  right: 14%;
-  top: -10%;
-  display: none;
-
-  @media (min-width: 640px) {
-    display: block;
-  }
-
-  @media (min-width: 800px) {
-    top: -40%;
   }
 `
 
