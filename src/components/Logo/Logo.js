@@ -15,26 +15,31 @@ const Icon = styled.img`
 `
 
 const Text = styled.div`
-  color: #fff;
+  color: ${({ darkColor }) => (darkColor ? '#888' : '#fff')};
   text-align: right;
-  display: none;
   line-height: 1.3;
   margin-left: 1.5vw;
   font-size: 1.125rem;
 
-  @media (min-width: 540px) {
-    display: block;
-  }
+  ${({ inHeader }) =>
+    inHeader &&
+    `
+    display: none;
+
+    @media (min-width: 650px) {
+      display: block;
+    }
+  `};
 `
 
 const WebDeveloper = styled.div`
   font-size: 0.75rem;
 `
 
-const Logo = () => (
+const Logo = ({ darkColor, inHeader }) => (
   <LinkStyle to="/">
     <Icon src={imgLogo} />
-    <Text>
+    <Text inHeader={inHeader} darkColor={darkColor}>
       Hanna Söderström
       <WebDeveloper>&lt;Web Developer/&gt;</WebDeveloper>
     </Text>

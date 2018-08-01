@@ -9,20 +9,23 @@ import MainNavigation from '../MainNavigation'
 import SocialMedia from '../../SocialMedia'
 
 const Header = styled.header`
-  position: absolute;
+  position: ${({ absolute }) => (absolute ? 'absolute' : 'relative')};
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
 `
 
-const MainHeader = () => {
+const MainHeader = ({ absolute, darkColor }) => {
   return (
-    <Header>
+    <Header absolute={absolute}>
       <Wrapper maxWidth="1340px">
-        <Logo />
-        <MainNavigation currentPath={window.location.pathname} />
-        <SocialMedia />
+        <Logo inHeader darkColor={darkColor} />
+        <MainNavigation
+          currentPath={window.location.pathname}
+          darkColor={darkColor}
+        />
+        <SocialMedia inHeader darkColor={darkColor} />
       </Wrapper>
     </Header>
   )

@@ -5,6 +5,16 @@ const Section = styled.section`
   display: flex;
   align-items: center;
 
+  ${({ inHeader }) =>
+    inHeader &&
+    `
+      display: none;
+  
+      @media (min-width: 850px) {
+        display: flex;
+      }
+  `};
+
   & ul {
     display: flex;
     justify-content: center;
@@ -21,7 +31,6 @@ const Section = styled.section`
   }
 
   & a {
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +39,7 @@ const Section = styled.section`
 `
 const Icon = styled.i`
   font-size: 2rem;
-  color: #fff;
+  color: ${({ darkColor }) => (darkColor ? '#888' : '#fff')};
   animation-name: spin;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -55,22 +64,22 @@ const Icon = styled.i`
   }
 `
 
-const SocialMedia = () => (
-  <Section>
+const SocialMedia = ({ darkColor, inHeader }) => (
+  <Section inHeader={inHeader}>
     <ul>
       <li>
         <a href="https://github.com/gothbarbie/hannasoderstrom.com-2018">
-          <Icon className="fab fa-github" />
+          <Icon className="fab fa-github" darkColor={darkColor} />
         </a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/hannasoderstromwebdev/">
-          <Icon className="fab fa-linkedin" />
+          <Icon className="fab fa-linkedin" darkColor={darkColor} />
         </a>
       </li>
       <li>
         <a href="https://medium.com/@gothbarbie84">
-          <Icon className="fab fa-medium" />
+          <Icon className="fab fa-medium" darkColor={darkColor} />
         </a>
       </li>
     </ul>

@@ -22,6 +22,7 @@ const Nav = styled.nav`
   }
 
   & a {
+    color: ${({ darkColor }) => (darkColor ? '#888' : '#fff')};
     & :hover {
       border-bottom: 4px solid white;
     }
@@ -54,8 +55,10 @@ class MainNavigation extends Component {
 
   render() {
     const { currentRoute } = this.state
+    const { darkColor } = this.props
+
     return (
-      <Nav>
+      <Nav darkColor={darkColor}>
         <ul>
           <li>
             <HomeLinkWithActive

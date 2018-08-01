@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Header from '../../components/Layout/MainHeader'
@@ -14,19 +13,21 @@ import imgHanna300 from '../../images/hanna2018-300.jpg'
 import imgKristina from '../../images/kristina.jpg'
 import imgRebecca from '../../images/rebecca.jpg'
 
-import SocialMedia from '../../components/SocialMedia'
+import A from '../../components/Typography/A'
 import H2 from '../../components/Typography/H2'
 import H3 from '../../components/Typography/H3'
 import P from '../../components/Typography/P'
 
 const Hero = styled.section`
-  background-image: url(${imgComputer400});
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
+  transform-style: inherit;
+  background-image: url(${imgComputer400});
 
   @media (min-width: 550px) {
     background-image: url(${imgComputer1000});
@@ -39,24 +40,94 @@ const Hero = styled.section`
 
 const HeroWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 940px;
   height: 100vh;
   min-height: 450px;
+  padding: 0 4vw;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `
 
 const H1 = styled.h1`
-  font-size: 4.5rem;
-  line-height: 4rem;
   text-align: right;
   color: #fff;
   font-weight: 300;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 3rem;
+  line-height: 2rem;
+  margin-top: 15vh;
 
   & span {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  @media (min-width: 500px) {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+
+    & span {
+      font-size: 1.75rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  @media (min-width: 550px) {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+
+    & span {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+
+  @media (min-width: 600px) {
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+
+    & span {
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  @media (min-width: 850px) {
+    font-size: 4rem;
+    line-height: 4rem;
+
+    & span {
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    font-size: 4.25rem;
+    line-height: 4.25rem;
+    margin-top: 0;
+
+    & span {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  @media (min-width: 950px) {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+
+    & span {
+      font-size: 2.75rem;
+      line-height: 2.75rem;
+    }
   }
 `
 
@@ -69,8 +140,13 @@ const Avatar = styled.div`
   background-image: url(${imgHanna300});
   background-size: cover;
   border-radius: 50%;
-  width: 256px;
-  height: 256px;
+  width: 200px;
+  height: 200px;
+
+  @media (min-width: 950px) {
+    width: 225px;
+    height: 225px;
+  }
 
   @media (min-width: 1600px) {
     max-width: 100%;
@@ -126,7 +202,7 @@ const AboutMe = styled(Wrapper)`
 
 const Home = () => (
   <React.Fragment>
-    <Header />
+    <Header absolute />
     <section>
       <Hero>
         <HeroWrapper>
@@ -258,7 +334,7 @@ const Home = () => (
         </P>
         <P>
           Want more specific examples and details?{' '}
-          <Link to="/work">Check out my work</Link>.
+          <A to="/work">Check out my work</A>.
         </P>
       </AboutMe>
     </section>
