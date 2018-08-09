@@ -174,7 +174,7 @@ const Quotes = styled.section`
   }
 
   @media (min-width: 800px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 `
 
@@ -208,7 +208,8 @@ const Home = () => (
         <HeroWrapper>
           <Avatar />
           <H1 data-test="title">
-            Hanna Söderström<br />
+            Hanna Söderström
+            <br />
             <span>&lt;Web Developer /&gt;</span>
           </H1>
         </HeroWrapper>
@@ -226,7 +227,8 @@ const Home = () => (
             </em>
           </Quote>
           <Name>
-            Kristina Herngren<br />
+            Kristina Herngren
+            <br />
             Agency Director at Iteam Solutions AB
           </Name>
         </Quoter>
@@ -245,7 +247,8 @@ const Home = () => (
             </em>
           </Quote>
           <Name>
-            Rebecca Norén<br />
+            Rebecca Norén
+            <br />
             UX Designer at Iteam Solutions AB
           </Name>
         </Quoter>
