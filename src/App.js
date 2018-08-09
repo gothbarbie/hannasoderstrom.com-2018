@@ -8,8 +8,8 @@ import Error from './components/Error'
 import asyncComponent from './components/AsyncComponent/AsyncComponent'
 
 const Home = asyncComponent(() => import('./views/Home'))
-const Recently = asyncComponent(() => import('./views/Recently'))
-const RecentlyArticle = asyncComponent(() => import('./views/Recently/Article'))
+const News = asyncComponent(() => import('./views/News'))
+const NewsArticle = asyncComponent(() => import('./views/News/Article'))
 const Work = asyncComponent(() => import('./views/Work'))
 const Contact = asyncComponent(() => import('./views/Contact'))
 const NotFound404 = asyncComponent(() =>
@@ -27,8 +27,8 @@ const App = () => (
     <AppWrapper>
       <ScrollToTop>
         <Route component={Home} exact path="/" />
-        <Route component={Recently} exact path="/news" />
-        <Route component={RecentlyArticle} path="/news/:title" />
+        <Route component={News} exact path="/news" />
+        <Route component={NewsArticle} path="/news/:title" />
         <Route component={Work} exact path="/work" />
         <Route component={Contact} exact path="/contact" />
         <Route component={NotFound404} path="/not-found" />
