@@ -87,7 +87,7 @@ export class Article extends Component<Props> {
 
     return (
       <Wrapper>
-        <Link data-test="back-link" to="/recently">
+        <Link data-test="back-link" to="/news">
           ← Back
         </Link>
         <WrapperSmall>
