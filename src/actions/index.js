@@ -37,6 +37,7 @@ export const fetchRecentlies = () => async dispatch => {
             content: item.content,
             date: item.date,
             excerpt: item.excerpt,
+            slug: item.slug,
             media: {
               guid: {
                 rendered:
