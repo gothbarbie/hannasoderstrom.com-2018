@@ -1,2 +1,2 @@
-import Recently from './Recently'
-export default Recently
+import News from './News'
+export default News
