@@ -5,9 +5,16 @@ exports[`views/News renders when no content 1`] = `
   <MainHeader
     darkColor={true}
   />
-  <styled.div>
-    <styled.section />
-  </styled.div>
+  <React.Fragment>
+    <styled.div>
+      <styled.section>
+        <styled.article />
+        <styled.article />
+        <styled.article />
+      </styled.section>
+    </styled.div>
+    <LoadingSpinner />
+  </React.Fragment>
   <MainFooter />
 </React.Fragment>
 `;

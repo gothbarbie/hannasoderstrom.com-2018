@@ -37,6 +37,32 @@ const Grid = styled.section`
   }
 `
 
+const FillerGrid = styled.section`
+  width: 100%;
+  display: flex;
+  margin: 3rem 0;
+`
+
+const FakeArticleOne = styled.article`
+  background: #eee;
+  height: 500px;
+  width: 495px;
+  margin: 0 5% 0 0;
+`
+
+const FakeArticleTwo = styled.article`
+  background: #eee;
+  height: 400px;
+  width: 221px;
+  margin: 0 5% 0 0;
+`
+
+const FakeArticleThree = styled.article`
+  background: #eee;
+  height: 300px;
+  width: 221px;
+`
+
 const Article = styled.article`
   margin: 3rem 0;
 
@@ -86,8 +112,6 @@ export class News extends Component<Props> {
   }
 
   renderArticles() {
-    if (!this.props.recentlies) return
-
     const { recentlies } = this.props
 
     return recentlies.map(item => {
@@ -127,14 +151,28 @@ export class News extends Component<Props> {
   }
 
   render() {
-    if (this.props.loading) return <LoadingSpinner />
+    //if (this.props.loading) return <LoadingSpinner />
 
     return (
       <React.Fragment>
         <MainHeader darkColor />
-        <Wrapper>
-          <Grid>{this.renderArticles()}</Grid>
-        </Wrapper>
+        {this.props.recentlies.length ? (
+          <Wrapper>
+            <Grid>{this.renderArticles()}</Grid>
+          </Wrapper>
+        ) : (
+          <React.Fragment>
+            <Wrapper>
+              <FillerGrid>
+                <FakeArticleOne />
+                <FakeArticleTwo />
+                <FakeArticleThree />
+              </FillerGrid>
+            </Wrapper>
+            <LoadingSpinner />
+          </React.Fragment>
+        )}
+
         <MainFooter />
       </React.Fragment>
     )
