@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { Recently } from '../Recently'
+import { News } from '../News'
 
-describe('views/Recently', () => {
+describe('views/News', () => {
   let component
   let store
   let fetchRecentlies
@@ -16,11 +16,7 @@ describe('views/Recently', () => {
       subscribe: jest.fn(),
     }
     component = shallow(
-      <Recently
-        fetchRecentlies={fetchRecentlies}
-        recentlies={[]}
-        store={store}
-      />
+      <News fetchRecentlies={fetchRecentlies} recentlies={[]} store={store} />
     )
   })
 
