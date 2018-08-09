@@ -20,10 +20,11 @@ export const fetchRecentlies = () => async dispatch => {
                     item.featured_media
                   }`
                 )
-                return {
+                const itemWithMedia = {
                   ...item,
                   media: data,
                 }
+                return itemWithMedia
               }
               return item
             })
