@@ -80,15 +80,15 @@ type Props = {
   recentlies: RecentlyType[],
 }
 
-export class Recently extends Component<Props> {
+export class News extends Component<Props> {
   componentDidMount() {
     this.props.fetchRecentlies()
   }
 
   renderArticles() {
-    const { recentlies } = this.props
+    if (!this.props.recentlies) return
 
-    if (!recentlies.length) return null
+    const { recentlies } = this.props
 
     return recentlies.map(item => {
       const dateFormatted = new Date(item.date)
@@ -155,4 +155,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Recently)
+)(News)
