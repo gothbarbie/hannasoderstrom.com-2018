@@ -5,11 +5,15 @@ exports[`components/MainHeader renders 1`] = `
   <styled.div
     maxWidth="1340px"
   >
-    <Logo />
+    <Logo
+      inHeader={true}
+    />
     <MainNavigation
       currentPath="/"
     />
-    <SocialMedia />
+    <SocialMedia
+      inHeader={true}
+    />
   </styled.div>
 </styled.header>
 `;

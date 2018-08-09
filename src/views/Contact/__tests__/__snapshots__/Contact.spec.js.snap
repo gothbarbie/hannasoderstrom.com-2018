@@ -1,67 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`views/Contact renders 1`] = `
-<styled.div
-  column={true}
->
-  <styled.section>
-    <styled.div>
-      <styled.h1>
-        Contact
-      </styled.h1>
-      <styled.p>
-        If you want to get in touch with me, you can send me an email or contact me via social media.
-      </styled.p>
-      <styled.img
-        alt="Hanna"
-        src="hanna2018.jpg"
-      />
-    </styled.div>
-    <styled.div>
-      <a
-        href="mailto:info@hannasoderstrom.com"
-      >
-        <Icon
-          color="#BDBDBD"
-          name="envelope"
-          pulseAnimation={true}
-          size="3"
+<React.Fragment>
+  <MainHeader
+    darkColor={true}
+  />
+  <styled.div
+    column={true}
+  >
+    <styled.section>
+      <styled.div>
+        <styled.h1>
+          Contact
+        </styled.h1>
+        <styled.p>
+          If you want to get in touch with me, you can send me an email or contact me via social media.
+        </styled.p>
+        <styled.img
+          alt="Hanna"
+          src="hanna2018.jpg"
         />
-      </a>
-      <a
-        href="https://github.com/gothbarbie/hannasoderstrom.com-2018"
-      >
-        <Icon
-          color="#BDBDBD"
-          isBrand={true}
-          name="github"
-          pulseAnimation={true}
-          size="3"
-        />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/hannasoderstromwebdev/"
-      >
-        <Icon
-          color="#BDBDBD"
-          isBrand={true}
-          name="linkedin"
-          pulseAnimation={true}
-          size="3"
-        />
-      </a>
-      <a
-        href="https://medium.com/@gothbarbie84"
-      >
-        <Icon
-          color="#BDBDBD"
-          isBrand={true}
-          name="medium"
-          pulseAnimation={true}
-          size="3"
-        />
-      </a>
-    </styled.div>
-  </styled.section>
-</styled.div>
+      </styled.div>
+      <styled.div>
+        <a
+          href="mailto:info@hannasoderstrom.com"
+        >
+          <Icon
+            color="#BDBDBD"
+            name="envelope"
+            pulseAnimation={true}
+            size="3"
+          />
+        </a>
+        <a
+          href="https://github.com/gothbarbie/hannasoderstrom.com-2018"
+        >
+          <Icon
+            color="#BDBDBD"
+            isBrand={true}
+            name="github"
+            pulseAnimation={true}
+            size="3"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/hannasoderstromwebdev/"
+        >
+          <Icon
+            color="#BDBDBD"
+            isBrand={true}
+            name="linkedin"
+            pulseAnimation={true}
+            size="3"
+          />
+        </a>
+        <a
+          href="https://medium.com/@gothbarbie84"
+        >
+          <Icon
+            color="#BDBDBD"
+            isBrand={true}
+            name="medium"
+            pulseAnimation={true}
+            size="3"
+          />
+        </a>
+      </styled.div>
+    </styled.section>
+  </styled.div>
+  <MainFooter />
+</React.Fragment>
 `;
