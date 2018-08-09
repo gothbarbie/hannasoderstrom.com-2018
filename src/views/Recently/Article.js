@@ -10,9 +10,7 @@ import { fetchRecently } from '../../actions'
 import Wrapper from '../../components/Layout/Wrapper'
 import LoadingSpinner from '../../components/LoadingSpinner'
 import H1 from '../../components/Typography/H1'
-import Small from '../../components/Small'
-
-import './Article.css'
+import Small from '../../components/Typography/Small'
 
 import type { RouterHistory } from 'react-router-dom'
 
