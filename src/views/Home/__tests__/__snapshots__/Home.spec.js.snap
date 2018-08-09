@@ -2,7 +2,9 @@
 
 exports[`views/Home renders 1`] = `
 <React.Fragment>
-  <MainHeader />
+  <MainHeader
+    absolute={true}
+  />
   <section>
     <styled.section>
       <styled.div>
@@ -102,12 +104,11 @@ exports[`views/Home renders 1`] = `
       <styled.p>
         Want more specific examples and details?
          
-        <Link
-          replace={false}
+        <Styled(Link)
           to="/work"
         >
           Check out my work
-        </Link>
+        </Styled(Link)>
         .
       </styled.p>
     </Styled(styled.div)>

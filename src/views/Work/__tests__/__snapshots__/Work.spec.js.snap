@@ -1,24 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`views/Work renders 1`] = `
-<styled.div>
-  <styled.section>
+<React.Fragment>
+  <MainHeader
+    darkColor={true}
+  />
+  <styled.div
+    column={true}
+  >
     <styled.article>
       <header>
-        <styled.img
+        <Styled(styled.img)
           alt="Iteam"
+          maxWidth="365px"
           src="iteam.png"
         />
+        <styled.div>
+          Frontend Developer
+        </styled.div>
         <styled.small>
-          Aug 2016 - Today
+          August 2016 - August 2018
         </styled.small>
       </header>
       <styled.main>
         <styled.p>
-          Culture, value and fun is the keywords for Iteam, where I work as a Web Developer. We work in an agile manner, in self-organising teams and in close relationship with our clients, to bring them value. Not only with technology, but with culture as well. Our core values - to produce value, to have fun and to do good - influence not only our daily work, but the clients we take on, the projects we choose to be a part of and therefore also the dedication and eagerness with which we produce really great results for a wide range of businesses.
+          Culture, value and fun is the keywords for Iteam, where I worked as a Web Developer. We worked in an agile manner, in self-organizing teams and in close relationship with our clients, to bring them value. Not only with technology, but with culture as well. Our core values - to produce value, to have fun and to do good - influenced not only our daily work, but the clients we took on, the projects we choose to be a part of and therefore also the dedication and eagerness with which we produced really great results for a wide range of businesses.
         </styled.p>
         <styled.p>
-          My roles has been primarily focused on front end development so far, using technologies such as:
+          My roles was primarily focused on frontend development, using technologies such as:
         </styled.p>
         <styled.section>
           <styled.img
@@ -53,7 +62,7 @@ exports[`views/Work renders 1`] = `
           />
         </styled.section>
         <styled.p>
-          I have grown in skill a great deal during the last year through my daily and continuous work with cutting edge technologies, working with really experienced and talented people in all areas of web development.
+          I grew in skill a great deal during the last year through my daily and continuous work with cutting edge technologies, working with really experienced and talented people in all areas of web development.
         </styled.p>
         <styled.section>
           <styled.img
@@ -76,12 +85,16 @@ exports[`views/Work renders 1`] = `
     </styled.article>
     <styled.article>
       <header>
-        <styled.img
+        <Styled(styled.img)
           alt="Widespace"
+          maxWidth="480px"
           src="widespace.png"
         />
+        <styled.div>
+          Web Designer & Developer
+        </styled.div>
         <styled.small>
-          Feb 2015 - Aug 2016
+          February 2015 - August 2016
         </styled.small>
       </header>
       <styled.main>
@@ -89,7 +102,7 @@ exports[`views/Work renders 1`] = `
           Widespace provides a platform for mobile advertising all over Europe, connecting publishers with advertisers.
         </styled.p>
         <styled.p>
-          I worked in the Studio team, a group with a wide range of skills doing everything from producing ads and new creative mobile ad formats to optimising ads from other medias for the mobile platform.
+          I worked in the Studio team, a group with a wide range of skills doing everything from producing ads and new creative mobile ad formats to optimizing ads from other medias for the mobile platform.
         </styled.p>
         <styled.p>
           We worked daily with very short deadlines, 100% performance accountability and served the greatest brands there is, our ads shown to millions of people daily and on the most saught after ad-spots. We focused not only on making ads seen but also to be engaging and fun with all the tools and sensors of modern mobile phones at our disposal.
@@ -198,12 +211,16 @@ exports[`views/Work renders 1`] = `
     </styled.article>
     <styled.article>
       <header>
-        <styled.img
+        <Styled(styled.img)
           alt="Hanna Söderström"
+          maxWidth="400px"
           src="hannasoderstrom.png"
         />
+        <styled.div>
+          Web Designer & Developer
+        </styled.div>
         <styled.small>
-          Jan 2012 - Feb 2015
+          January 2012 - February 2015
         </styled.small>
       </header>
       <styled.main>
@@ -466,6 +483,7 @@ exports[`views/Work renders 1`] = `
         </styled.article>
       </styled.main>
     </styled.article>
-  </styled.section>
-</styled.div>
+  </styled.div>
+  <MainFooter />
+</React.Fragment>
 `;
