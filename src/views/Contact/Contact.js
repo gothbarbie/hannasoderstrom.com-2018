@@ -10,10 +10,17 @@ import Icon from '../../components/Icon'
 
 import imgHanna from '../../images/hanna2018.jpg'
 
+const H1WithMargin = styled(H1)`
+  font-size: 3rem;
+  margin-bottom: 4.25rem;
+  font-weight: 100;
+`
+
 const Grid = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 10%;
+  margin: 5rem 0;
 
   @media (min-width: 700px) {
     grid-template-columns: 1fr 1fr;
@@ -25,23 +32,22 @@ const FirstColumn = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  & a {
+    color: #ee307f;
+  }
 `
 
 const SecondColumn = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 2rem;
-
-  @media (min-width: 700px) {
-    padding: 10rem 0 0 0;
-  }
+  justify-content: flex-end;
 `
 
 const Avatar = styled.img`
   border-radius: 50%;
   height: auto;
-  width: 50%;
+  width: 60%;
   align-self: center;
   margin: 2rem 0;
 `
@@ -49,47 +55,19 @@ const Avatar = styled.img`
 const Contact = () => (
   <React.Fragment>
     <MainHeader darkColor />
-    <Wrapper column>
+    <Wrapper column maxWidth="970px">
       <Grid>
         <FirstColumn>
-          <H1>Contact</H1>
+          <H1WithMargin>Contact</H1WithMargin>
+          <P>The best way to reach me is via email.</P>
           <P>
-            If you want to get in touch with me, you can send me an email or
-            contact me via social media.
+            <a href="mailto:contact@hannasoderstrom.com">
+              contact@hannasoderstrom.com
+            </a>
           </P>
-          <Avatar alt="Hanna" src={imgHanna} />
         </FirstColumn>
         <SecondColumn>
-          <a href="mailto:info@hannasoderstrom.com">
-            <Icon color="#BDBDBD" name="envelope" pulseAnimation size="3" />
-          </a>
-          <a href="https://github.com/gothbarbie/hannasoderstrom.com-2018">
-            <Icon
-              color="#BDBDBD"
-              isBrand
-              name="github"
-              pulseAnimation
-              size="3"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/hannasoderstromwebdev/">
-            <Icon
-              color="#BDBDBD"
-              isBrand
-              name="linkedin"
-              pulseAnimation
-              size="3"
-            />
-          </a>
-          <a href="https://medium.com/@gothbarbie84">
-            <Icon
-              color="#BDBDBD"
-              isBrand
-              name="medium"
-              pulseAnimation
-              size="3"
-            />
-          </a>
+          <Avatar alt="Hanna" src={imgHanna} />
         </SecondColumn>
       </Grid>
     </Wrapper>
