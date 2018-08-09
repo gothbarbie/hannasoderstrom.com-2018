@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Wrapper from '../../components/Layout/Wrapper'
+import MainHeader from '../../components/Layout/MainHeader'
+import MainFooter from '../../components/Layout/MainFooter'
 import H1 from '../../components/Typography/H1'
 import P from '../../components/Typography/P'
 import Icon from '../../components/Icon'
@@ -45,38 +47,54 @@ const Avatar = styled.img`
 `
 
 const Contact = () => (
-  <Wrapper column>
-    <Grid>
-      <FirstColumn>
-        <H1>Contact</H1>
-        <P>
-          If you want to get in touch with me, you can send me an email or
-          contact me via social media.
-        </P>
-        <Avatar alt="Hanna" src={imgHanna} />
-      </FirstColumn>
-      <SecondColumn>
-        <a href="mailto:info@hannasoderstrom.com">
-          <Icon color="#BDBDBD" name="envelope" pulseAnimation size="3" />
-        </a>
-        <a href="https://github.com/gothbarbie/hannasoderstrom.com-2018">
-          <Icon color="#BDBDBD" isBrand name="github" pulseAnimation size="3" />
-        </a>
-        <a href="https://www.linkedin.com/in/hannasoderstromwebdev/">
-          <Icon
-            color="#BDBDBD"
-            isBrand
-            name="linkedin"
-            pulseAnimation
-            size="3"
-          />
-        </a>
-        <a href="https://medium.com/@gothbarbie84">
-          <Icon color="#BDBDBD" isBrand name="medium" pulseAnimation size="3" />
-        </a>
-      </SecondColumn>
-    </Grid>
-  </Wrapper>
+  <React.Fragment>
+    <MainHeader darkColor />
+    <Wrapper column>
+      <Grid>
+        <FirstColumn>
+          <H1>Contact</H1>
+          <P>
+            If you want to get in touch with me, you can send me an email or
+            contact me via social media.
+          </P>
+          <Avatar alt="Hanna" src={imgHanna} />
+        </FirstColumn>
+        <SecondColumn>
+          <a href="mailto:info@hannasoderstrom.com">
+            <Icon color="#BDBDBD" name="envelope" pulseAnimation size="3" />
+          </a>
+          <a href="https://github.com/gothbarbie/hannasoderstrom.com-2018">
+            <Icon
+              color="#BDBDBD"
+              isBrand
+              name="github"
+              pulseAnimation
+              size="3"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/hannasoderstromwebdev/">
+            <Icon
+              color="#BDBDBD"
+              isBrand
+              name="linkedin"
+              pulseAnimation
+              size="3"
+            />
+          </a>
+          <a href="https://medium.com/@gothbarbie84">
+            <Icon
+              color="#BDBDBD"
+              isBrand
+              name="medium"
+              pulseAnimation
+              size="3"
+            />
+          </a>
+        </SecondColumn>
+      </Grid>
+    </Wrapper>
+    <MainFooter />
+  </React.Fragment>
 )
 
 export default Contact
