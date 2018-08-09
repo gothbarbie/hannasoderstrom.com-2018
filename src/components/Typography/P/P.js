@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const P = styled.p`
-  margin: 1rem 0;
+  margin: 1rem 0 2rem;
   font-weight: 200;
   color: #333;
   font-size: 1rem;
