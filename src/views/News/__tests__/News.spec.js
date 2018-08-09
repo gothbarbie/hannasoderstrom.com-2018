@@ -14,9 +14,15 @@ describe('views/News', () => {
       dispatch: jest.fn(),
       getState: jest.fn(),
       subscribe: jest.fn(),
+      recentlies: [],
     }
+    const recentlies = []
     component = shallow(
-      <News fetchRecentlies={fetchRecentlies} recentlies={[]} store={store} />
+      <News
+        fetchRecentlies={fetchRecentlies}
+        recentlies={recentlies}
+        store={store}
+      />
     )
   })
 
