@@ -7,8 +7,10 @@ import styled from 'styled-components'
 import { fetchRecentlies } from '../../actions'
 
 import Wrapper from '../../components/Layout/Wrapper'
+import MainHeader from '../../components/Layout/MainHeader'
+import MainFooter from '../../components/Layout/MainFooter'
 import LoadingSpinner from '../../components/LoadingSpinner'
-import Small from '../../components/Small'
+import Small from '../../components/Typography/Small'
 
 import type { RecentlyType } from '../../types'
 
@@ -79,11 +81,11 @@ type Props = {
 }
 
 export class Recently extends Component<Props> {
-  componentDidMount () {
+  componentDidMount() {
     this.props.fetchRecentlies()
   }
 
-  renderArticles () {
+  renderArticles() {
     const { recentlies } = this.props
 
     if (!recentlies.length) return null
@@ -112,25 +114,29 @@ export class Recently extends Component<Props> {
                 src={item.media && item.media.guid.rendered}
               />
             )}
-              <Small
-                dangerouslySetInnerHTML={{
+            <Small
+              dangerouslySetInnerHTML={{
                 __html: dateFormatted.toLocaleDateString('en-EN', options),
               }}
             />
-              <main dangerouslySetInnerHTML={{ __html: excerpt.rendered }} />
+            <main dangerouslySetInnerHTML={{ __html: excerpt.rendered }} />
           </Linked>
         </Article>
       )
     })
   }
 
-  render () {
+  render() {
     if (this.props.loading) return <LoadingSpinner />
 
     return (
-      <Wrapper>
-        <Grid>{this.renderArticles()}</Grid>
-      </Wrapper>
+      <React.Fragment>
+        <MainHeader darkColor />
+        <Wrapper>
+          <Grid>{this.renderArticles()}</Grid>
+        </Wrapper>
+        <MainFooter />
+      </React.Fragment>
     )
   }
 }
