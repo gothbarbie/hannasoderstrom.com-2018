@@ -6,13 +6,11 @@ exports[`views/News renders when no content 1`] = `
     darkColor={true}
   />
   <React.Fragment>
-    <styled.div>
-      <styled.section>
-        <styled.article />
-        <styled.article />
-        <styled.article />
-      </styled.section>
-    </styled.div>
+    <Styled(styled.div)>
+      <styled.h2>
+        Loading content...
+      </styled.h2>
+    </Styled(styled.div)>
     <LoadingSpinner />
   </React.Fragment>
   <MainFooter />
@@ -31,35 +29,27 @@ exports[`views/News renders with content 1`] = `
         data-test="article"
         key="1"
       >
-        <Styled(Link)
-          to="recently/undefined"
-        >
-          <styled.h2
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Hello",
-              }
+        <styled.h1
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Hello",
             }
-          />
-          <img
-            alt="Hello"
-            src="http://www.image.com/image01.jpg"
-          />
-          <styled.small
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Invalid Date",
-              }
+          }
+        />
+        <Styled(styled.small)
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Invalid Date",
             }
-          />
-          <main
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<p>Hello</p>",
-              }
+          }
+        />
+        <main
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>Hello world</p>",
             }
-          />
-        </Styled(Link)>
+          }
+        />
       </styled.article>
     </styled.section>
   </styled.div>

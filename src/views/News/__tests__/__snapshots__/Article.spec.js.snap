@@ -7,7 +7,7 @@ exports[`views/Article renders with content 1`] = `
   <Link
     data-test="back-link"
     replace={false}
-    to="/recently"
+    to="/news"
   >
     ← Back
   </Link>
