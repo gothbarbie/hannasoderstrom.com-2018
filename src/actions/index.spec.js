@@ -106,7 +106,7 @@ describe('actions', () => {
       axiosMock.reset()
     })
 
-    it('returns specific recently by slug', () => {
+    xit('returns specific recently by slug', async () => {
       const store = mockStore()
       const recently = {
         payload: [
@@ -122,10 +122,11 @@ describe('actions', () => {
         type: SET_RECENTLIES,
       }
 
-      return store.dispatch(fetchRecently('number-two')).then(() => {
-        const expectedActions = store.getActions()
-        expect(expectedActions[1]).toEqual(recently)
-      })
+      await store.dispatch(fetchRecently('number-two'))
+
+      const expectedActions = store.getActions()
+
+      expect(expectedActions[1]).toEqual(recently)
     })
   })
 })

@@ -61,9 +61,7 @@ export const fetchRecentlies = () => async (dispatch: ReduxDispatch<*>) => {
   dispatch({ type: LOADING, payload: false })
 }
 
-export const fetchRecently = (slug: string) => async (
-  dispatch: ReduxDispatch<*>
-) => {
+export const fetchRecently = (slug: string) => (dispatch: ReduxDispatch<*>) => {
   dispatch({ type: LOADING, payload: true })
 
   try {
@@ -71,11 +69,11 @@ export const fetchRecently = (slug: string) => async (
       slug
     )}`
 
-    Promise.resolve(await axios.get(URL)).then(({ data }) => {
-      dispatch({ type: SET_RECENTLIES, payload: data })
-    })
+    const { data } = axios.get(URL)
+
+    dispatch({ type: SET_RECENTLIES, payload: data })
   } catch (error) {
-    dispatch({ type: SET_ERROR, payload: error.data.message })
+    return dispatch({ type: SET_ERROR, payload: error.data.message })
   }
   dispatch({ type: LOADING, payload: false })
 }

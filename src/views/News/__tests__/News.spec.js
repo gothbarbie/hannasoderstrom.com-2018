@@ -14,7 +14,6 @@ describe('views/News', () => {
       dispatch: jest.fn(),
       getState: jest.fn(),
       subscribe: jest.fn(),
-      recentlies: [],
     }
     const recentlies = []
     component = shallow(
