@@ -6,24 +6,25 @@ import MainHeader from '../../components/Layout/MainHeader'
 import MainFooter from '../../components/Layout/MainFooter'
 import H1 from '../../components/Typography/H1'
 import P from '../../components/Typography/P'
-import Icon from '../../components/Icon'
 
 import imgHanna from '../../images/hanna2018.jpg'
 
 const H1WithMargin = styled(H1)`
   font-size: 3rem;
-  margin-bottom: 4.25rem;
+  margin-bottom: 4.25vw;
   font-weight: 100;
 `
 
-const Grid = styled.section`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 10%;
-  margin: 5rem 0;
+const ContactWrapper = styled(Wrapper)`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
-  @media (min-width: 700px) {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: 620px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 `
 
@@ -38,16 +39,11 @@ const FirstColumn = styled.div`
   }
 `
 
-const SecondColumn = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`
-
 const Avatar = styled.img`
   border-radius: 50%;
   height: auto;
-  width: 60%;
+  width: 30%;
+  min-width: 300px;
   align-self: center;
   margin: 2rem 0;
 `
@@ -55,22 +51,19 @@ const Avatar = styled.img`
 const Contact = () => (
   <React.Fragment>
     <MainHeader darkColor />
-    <Wrapper column maxWidth="970px">
-      <Grid>
-        <FirstColumn>
-          <H1WithMargin>Contact</H1WithMargin>
-          <P>The best way to reach me is via email.</P>
-          <P>
-            <a href="mailto:contact@hannasoderstrom.com">
-              contact@hannasoderstrom.com
-            </a>
-          </P>
-        </FirstColumn>
-        <SecondColumn>
-          <Avatar alt="Hanna" src={imgHanna} />
-        </SecondColumn>
-      </Grid>
-    </Wrapper>
+    <ContactWrapper maxWidth="970px">
+      <FirstColumn>
+        <H1WithMargin>Contact</H1WithMargin>
+        <P>The best way to reach me is via email.</P>
+        <P>
+          <a href="mailto:contact@hannasoderstrom.com">
+            contact@hannasoderstrom.com
+          </a>
+        </P>
+      </FirstColumn>
+
+      <Avatar alt="Hanna" src={imgHanna} />
+    </ContactWrapper>
     <MainFooter />
   </React.Fragment>
 )
