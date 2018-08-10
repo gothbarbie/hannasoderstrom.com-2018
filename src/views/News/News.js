@@ -60,10 +60,10 @@ const Article = styled.article`
   }
 
   img {
-    width: 100%;
+    width: auto;
     height: auto;
     margin: 1.5rem auto;
-    max-width: 500px;
+    max-height: 400px;
     text-align: center;
   }
 
