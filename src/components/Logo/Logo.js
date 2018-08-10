@@ -1,8 +1,14 @@
+// @flow
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 import imgLogo from '../../images/icon.png'
+
+type LogoProps = {
+  darkColor: boolean,
+  inHeader: boolean,
+}
 
 const LinkStyle = styled(Link)`
   display: flex;
@@ -36,10 +42,10 @@ const WebDeveloper = styled.div`
   font-size: 0.75rem;
 `
 
-const Logo = ({ darkColor, inHeader }) => (
+const Logo = ({ darkColor, inHeader }: LogoProps) => (
   <LinkStyle to="/">
     <Icon src={imgLogo} />
-    <Text inHeader={inHeader} darkColor={darkColor}>
+    <Text darkColor={darkColor} inHeader={inHeader}>
       Hanna Söderström
       <WebDeveloper>&lt;Web Developer/&gt;</WebDeveloper>
     </Text>

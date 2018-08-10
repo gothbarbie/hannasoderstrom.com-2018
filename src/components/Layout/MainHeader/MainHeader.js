@@ -25,12 +25,12 @@ const MainHeader = ({ absolute, darkColor }: MainHeaderProps) => {
   return (
     <Header absolute={absolute}>
       <Wrapper maxWidth="1340px">
-        <Logo inHeader darkColor={darkColor} />
+        <Logo darkColor={darkColor} inHeader />
         <MainNavigation
           currentPath={window.location.pathname}
           darkColor={darkColor}
         />
-        <SocialMedia inHeader darkColor={darkColor} />
+        <SocialMedia darkColor={darkColor} inHeader />
       </Wrapper>
     </Header>
   )

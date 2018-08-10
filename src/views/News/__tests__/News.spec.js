@@ -36,6 +36,7 @@ describe('views/News', () => {
         {
           id: 1,
           title: { rendered: 'Hello' },
+          slug: 'hello',
           excerpt: {
             rendered: '<p>Hello</p>',
           },

@@ -1,5 +1,11 @@
+// @flow
 import React from 'react'
 import styled from 'styled-components'
+
+type SocialMediaProps = {
+  darkColor: boolean,
+  inHeader: boolean,
+}
 
 const Section = styled.section`
   display: flex;
@@ -64,7 +70,7 @@ const Icon = styled.i`
   }
 `
 
-const SocialMedia = ({ darkColor, inHeader }) => (
+const SocialMedia = ({ darkColor, inHeader }: SocialMediaProps) => (
   <Section inHeader={inHeader}>
     <ul>
       <li>

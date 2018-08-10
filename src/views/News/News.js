@@ -105,11 +105,11 @@ type Props = {
 }
 
 export class News extends React.Component<Props> {
-  componentDidMount() {
+  componentDidMount () {
     this.props.fetchRecentlies()
   }
 
-  renderArticles() {
+  renderArticles () {
     const { recentlies } = this.props
 
     return recentlies.map(item => {
@@ -160,7 +160,7 @@ export class News extends React.Component<Props> {
     })
   }
 
-  render() {
+  render () {
     return (
       <React.Fragment>
         <MainHeader darkColor />

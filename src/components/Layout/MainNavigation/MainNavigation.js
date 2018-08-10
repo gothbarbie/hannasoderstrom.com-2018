@@ -1,6 +1,15 @@
+// @flow
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+
+type MainNavigationProps = {
+  darkColor: boolean,
+}
+
+type MainNavigationState = {
+  currentRoute: string,
+}
 
 const Nav = styled.nav`
   display: flex;
@@ -40,8 +49,11 @@ const LinkWithActive = HomeLinkWithActive.extend`
   padding-bottom: 0.375rem;
 `
 
-class MainNavigation extends Component {
-  constructor() {
+class MainNavigation extends Component<
+  MainNavigationProps,
+  MainNavigationState
+> {
+  constructor () {
     super()
 
     this.state = {
@@ -49,11 +61,14 @@ class MainNavigation extends Component {
     }
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate (
+    nextProps: MainNavigationProps,
+    nextState: MainNavigationState
+  ) {
     return nextState.currentRoute !== this.state.currentRoute
   }
 
-  render() {
+  render () {
     const { currentRoute } = this.state
     const { darkColor } = this.props
 

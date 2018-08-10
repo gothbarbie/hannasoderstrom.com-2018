@@ -61,7 +61,7 @@ type Props = {
 }
 
 export class Article extends Component<Props> {
-  componentDidMount() {
+  componentDidMount () {
     const url = decodeURI(window.location.pathname).split('/')
     const slug = url[2]
     const regex = new RegExp(/([A-Za-z0-9-])+/g)
@@ -71,7 +71,7 @@ export class Article extends Component<Props> {
     }
   }
 
-  render() {
+  render () {
     if (this.props.loading) return <LoadingSpinner />
 
     if (!this.props.recentlies.length) return null

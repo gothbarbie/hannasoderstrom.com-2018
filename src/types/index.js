@@ -1,4 +1,7 @@
+// @flow
 export type RecentlyType = {
+  id: string,
+  slug: string,
   content: {
     rendered: string,
   },

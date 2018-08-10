@@ -76,7 +76,7 @@ const Logo = Image.extend`
 `
 
 const CompanyLogo = styled(Image)`
-  max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : 'auto')};
+  max-width: ${({ maxWidth }) => maxWidth || 'auto'};
 `
 
 const Role = styled.div`

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, BrowserRouter as Router } from 'react-router-dom'
-import { mount, shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import ScrollToTop from './index'
 
 describe('components/ScrollToTop', () => {
