@@ -18,10 +18,10 @@ const Footer = styled.footer`
 
 const LogoStyle = styled.div`
   text-decoration: none;
-  margin-bottom: 3vw;
+  margin-bottom: 10vw;
   align-self: flex-start;
 
-  @media (min-width: 800px) {
+  @media (min-width: 440px) {
     margin-bottom: 0;
   }
 `
@@ -29,7 +29,12 @@ const LogoStyle = styled.div`
 const FooterWrapper = styled(Wrapper)`
   padding: 1rem 4%;
   flex-wrap: wrap;
+  flex-direction: column;
   position: relative;
+
+  @media (min-width: 440px) {
+    flex-direction: row;
+  }
 `
 
 const MainFooter = () => (
