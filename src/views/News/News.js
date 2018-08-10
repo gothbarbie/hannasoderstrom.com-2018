@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react'
+import * as React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
@@ -104,7 +104,7 @@ type Props = {
   recentlies: RecentlyType[],
 }
 
-export class News extends Component<Props> {
+export class News extends React.Component<Props> {
   componentDidMount() {
     this.props.fetchRecentlies()
   }

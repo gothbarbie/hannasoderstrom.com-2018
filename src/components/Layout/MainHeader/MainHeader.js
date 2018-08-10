@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import styled from 'styled-components'
 
 import Wrapper from '../Wrapper'
@@ -7,6 +7,11 @@ import Logo from '../../Logo'
 import MainNavigation from '../MainNavigation'
 
 import SocialMedia from '../../SocialMedia'
+
+type MainHeaderProps = {
+  absolute: boolean,
+  darkColor: boolean,
+}
 
 const Header = styled.header`
   position: ${({ absolute }) => (absolute ? 'absolute' : 'relative')};
@@ -16,7 +21,7 @@ const Header = styled.header`
   z-index: 2;
 `
 
-const MainHeader = ({ absolute, darkColor }) => {
+const MainHeader = ({ absolute, darkColor }: MainHeaderProps) => {
   return (
     <Header absolute={absolute}>
       <Wrapper maxWidth="1340px">
