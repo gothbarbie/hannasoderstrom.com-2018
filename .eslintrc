@@ -1,10 +1,19 @@
 {
-  "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
-  "extends": ["prettier", "prettier/react"],
+  "extends": [
+    "standard",
+    "plugin:flowtype/recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -12,7 +21,7 @@
     },
     "sourceType": "module"
   },
-  "plugins": ["babel", "react", "flowtype"],
+  "plugins": ["flowtype", "react", "prettier", "standard"],
   "rules": {
     "key-spacing": 0,
     "no-var": 2,
