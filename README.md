@@ -30,3 +30,11 @@ In order to make this app load faster I've used a number of different techniques
 ## Type-checking
 
 For type checking I'm using [Flow](https://github.com/facebook/flow), which similarly to TypeScript helps keeping basic bugs to a minimum.
+
+## Continuous Integration
+
+We use Travis for Continuous Integration.
+
+## Production
+
+Amazon Web Services - EC2.
