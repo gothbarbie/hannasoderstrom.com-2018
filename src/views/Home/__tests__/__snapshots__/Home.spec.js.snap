@@ -26,11 +26,11 @@ exports[`views/Home renders 1`] = `
           alt="Kristina Herngren"
           src="kristina.jpg"
         />
-        <styled.p>
+        <Styled(styled.p)>
           <em>
             "I have worked with Hanna in groups developing business culture and structure. Hanna is keen and responsive, smart and engaged and her presence strongly contributes to the experience of working at Iteam."
           </em>
-        </styled.p>
+        </Styled(styled.p)>
         <styled.p>
           Kristina Herngren
           <br />
@@ -42,11 +42,11 @@ exports[`views/Home renders 1`] = `
           alt="Rebecca Norén"
           src="rebecca.jpg"
         />
-        <styled.p>
+        <Styled(styled.p)>
           <em>
             "In my role as an UX designer I have worked in several projects together with Hanna. I have appreciated working together with Hanna, she is keen, pays attention to details and she is solution-oriented. She has great engagement when solving problems and she works actively to better cooperation between different roles in the teams. She is a fantastic colleague and she has great potential. I give her my greatest recommendations in her future endeavors."
           </em>
-        </styled.p>
+        </Styled(styled.p)>
         <styled.p>
           Rebecca Norén
           <br />
