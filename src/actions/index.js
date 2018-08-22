@@ -61,7 +61,9 @@ export const fetchRecentlies = () => async (dispatch: ReduxDispatch<*>) => {
   dispatch({ type: LOADING, payload: false })
 }
 
-export const fetchRecently = (slug: string) => (dispatch: ReduxDispatch<*>) => {
+export const fetchRecently = (slug: string) => async (
+  dispatch: ReduxDispatch<*>
+) => {
   dispatch({ type: LOADING, payload: true })
 
   try {
@@ -69,7 +71,7 @@ export const fetchRecently = (slug: string) => (dispatch: ReduxDispatch<*>) => {
       slug
     )}`
 
-    const { data } = axios.get(URL)
+    const { data } = await axios.get(URL)
 
     dispatch({ type: SET_RECENTLIES, payload: data })
   } catch (error) {
