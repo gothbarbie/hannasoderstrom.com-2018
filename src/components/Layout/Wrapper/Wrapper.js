@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: ${({ column }) => column && 'column'};
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   padding: 1rem 4%;
   position: relative;

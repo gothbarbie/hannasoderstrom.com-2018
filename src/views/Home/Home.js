@@ -132,8 +132,8 @@ const H1 = styled.h1`
 `
 
 const H3Home = styled(H3)`
-  margin-top: 5rem;
-  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
 `
 
 const Avatar = styled.div`
@@ -165,15 +165,13 @@ const Quotes = styled.section`
   border-left: 7px solid #ee307f;
   display: grid;
   justify-content: center;
-  padding: 5%;
+  padding: 10% 5%;
   grid-template-columns: 1fr;
   grid-column-gap: 6%;
+  grid-row-gap: 3rem;
 
-  @media (min-width: 500px) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
+    padding: 5%;
     grid-template-columns: 1fr 1fr;
   }
 `
@@ -185,9 +183,8 @@ const Quoter = styled.article`
   align-items: center;
 `
 
-const Quote = styled.p`
+const Quote = styled(P)`
   margin: 2rem 0;
-  line-height: 1.5;
 `
 
 const Name = styled.p`
