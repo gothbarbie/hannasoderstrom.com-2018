@@ -6,12 +6,12 @@ import styled from 'styled-components'
 
 import { fetchRecentlies } from '../../actions'
 
-import Wrapper from '../../components/Layout/Wrapper'
-import MainHeader from '../../components/Layout/MainHeader'
-import MainFooter from '../../components/Layout/MainFooter'
-import LoadingSpinner from '../../components/LoadingSpinner'
-import Small from '../../components/Typography/Small'
 import H1 from '../../components/Typography/H1'
+import LoadingSpinner from '../../components/LoadingSpinner'
+import MainFooter from '../../components/Layout/MainFooter'
+import MainHeader from '../../components/Layout/MainHeader'
+import Small from '../../components/Typography/Small'
+import Wrapper from '../../components/Layout/Wrapper'
 
 import type { RecentlyType } from '../../types'
 

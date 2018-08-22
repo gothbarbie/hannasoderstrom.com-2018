@@ -1,18 +1,25 @@
 // @flow
 import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import styled from 'styled-components'
 
 import { fetchRecently } from '../../actions'
 
-import Wrapper from '../../components/Layout/Wrapper'
-import LoadingSpinner from '../../components/LoadingSpinner'
+import A from '../../components/Typography/A'
 import H1 from '../../components/Typography/H1'
+import LoadingSpinner from '../../components/LoadingSpinner'
+import MainFooter from '../../components/Layout/MainFooter'
+import MainHeader from '../../components/Layout/MainHeader'
 import Small from '../../components/Typography/Small'
+import Wrapper from '../../components/Layout/Wrapper'
 
 import type { RouterHistory } from 'react-router-dom'
+
+const Link = styled(A)`
+  align-self: flex-start;
+`
 
 const WrapperSmall = styled.section`
   max-width: 600px;
@@ -41,7 +48,7 @@ type Props = {
   loading: boolean,
   fetchRecently: Function,
   history: RouterHistory,
-  recentlies: Array<{
+  recently: {
     content: {
       rendered: string,
     },
@@ -57,7 +64,7 @@ type Props = {
         rendered: string,
       },
     },
-  }>,
+  },
 }
 
 export class Article extends Component<Props> {
@@ -74,9 +81,9 @@ export class Article extends Component<Props> {
   render () {
     if (this.props.loading) return <LoadingSpinner />
 
-    if (!this.props.recentlies.length) return null
+    if (!this.props.recently.title) return null
 
-    const { content, date, title } = this.props.recentlies[0]
+    const { content, date, title } = this.props.recently
 
     const dateFormatted = new Date(date)
     const options = {
@@ -86,35 +93,37 @@ export class Article extends Component<Props> {
     }
 
     return (
-      <Wrapper>
-        <Link data-test="back-link" to="/news">
-          ← Back
-        </Link>
-        <WrapperSmall>
-          <Header>
-            <H1
-              dangerouslySetInnerHTML={{ __html: title.rendered }}
-              data-test="article-title"
+      <React.Fragment>
+        <MainHeader darkColor />
+        <Wrapper>
+          <Link to="/news">← Back</Link>
+          <WrapperSmall>
+            <Header>
+              <H1
+                dangerouslySetInnerHTML={{ __html: title.rendered }}
+                data-test="article-title"
+              />
+              <Small
+                dangerouslySetInnerHTML={{
+                  __html: dateFormatted.toLocaleDateString('en-EN', options),
+                }}
+              />
+            </Header>
+            <main
+              className="main"
+              dangerouslySetInnerHTML={{ __html: content.rendered }}
             />
-            <Small
-              dangerouslySetInnerHTML={{
-                __html: dateFormatted.toLocaleDateString('en-EN', options),
-              }}
-            />
-          </Header>
-          <main
-            className="main"
-            dangerouslySetInnerHTML={{ __html: content.rendered }}
-          />
-        </WrapperSmall>
-      </Wrapper>
+          </WrapperSmall>
+        </Wrapper>
+        <MainFooter />
+      </React.Fragment>
     )
   }
 }
 
-const mapStateToProps = ({ recentlies, loading }) => {
+const mapStateToProps = ({ recently, loading }) => {
   return {
-    recentlies,
+    recently,
     loading,
   }
 }

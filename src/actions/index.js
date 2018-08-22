@@ -1,7 +1,13 @@
 // @flow
 import axios from 'axios'
 
-import { SET_RECENTLIES, LOADING, SET_ERROR, RESET_ERROR } from './types'
+import {
+  SET_RECENTLIES,
+  SET_RECENTLY,
+  LOADING,
+  SET_ERROR,
+  RESET_ERROR,
+} from './types'
 
 import type { Dispatch as ReduxDispatch } from 'redux'
 
@@ -73,7 +79,7 @@ export const fetchRecently = (slug: string) => async (
 
     const { data } = await axios.get(URL)
 
-    dispatch({ type: SET_RECENTLIES, payload: data })
+    dispatch({ type: SET_RECENTLY, payload: data[0] })
   } catch (error) {
     return dispatch({ type: SET_ERROR, payload: error.data.message })
   }
